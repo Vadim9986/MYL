@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+
+html,
+body {
+    height: 100%;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+}
+
+.background__image {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.background__image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.quest {
+    position: relative;
+    padding: 40px 0;
+}
+
+
+
+.welcome_block {
+    width: 100%;
+    height: auto;
+    margin-top: 80px;
+
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Playfair Display';
+    font-weight: 600;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+.quest {
+    margin-top: 0px;
+}
+
+.quest__conetnt {
+    width: 30%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-family: 'Playfair Display';
+    font-size: 16px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+input,
+select,
+textarea {
+    background: -moz-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66d37272', endColorstr='#665d7ecc', GradientType=1);
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Playfair Display', sans-serif;
+    color: black;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: 0.2s linear;
+    display: block;
+}
+.string_name{
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+    resize: none;
+    /* Запрещаем изменять размер */
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: black;
+}
+
+.display__text {
+    text-align: center;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 16px;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #38393d
+}
+.validation{
+    color: red;
+}
+
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.file-input label {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+    margin: 5px 0 30px 0;
+}
+
+
+
+input:hover+label,
+input:focus+label {
+    transform: scale(1.02);
+}
+
+/* Adding an outline to the label on focus */
+input:focus+label {
+    border: 1px solid #000;
+    border: -webkit-focus-ring-color auto 2px;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: 'Playfair Display';
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.2s;
+    text-align: center;
+    width: 100%;
+    background:0;
+}
+
+.button_line {
+    position: absolute;
+    display: block;
+}
+
+.button_line--top {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #ff6ec4, #7873f5);
+}
+
+.button:hover .button_line--top {
+    left: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.button_line--bottom {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, #ff6ec4, #7873f5);
+}
+
+.button:hover .button_line--bottom {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.button_line--left {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, #ff6ec4, #7873f5);
+}
+
+.button:hover .button_line--left {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0s;
+}
+
+.button_line--right {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, #ff6ec4, #7873f5);
+}
+
+.button:hover .button_line--right {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0s;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px #f3218a, 0 0 40px #f3218a, 0 0 80px #f3218a;
+    background-color: #f3218a;
+    color: rgb(255, 255, 255);
+    transition-delay: 0.7s;
+}

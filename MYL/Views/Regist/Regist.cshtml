@@ -1,0 +1,67 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+@model MYL.ViewModels.UserRegistration
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="~/css/nulstyle.css" rel="stylesheet" />
+    <link href="~/css/Regist.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="background__image"><img src="~/img/two-people-in-the-sunset-free-photo.jpg" alt=""></div>
+
+    <div class="begin">
+        <form asp-action="Regist" asp-controller="Regist">
+            <div class="validation" asp-validation-summary="ModelOnly"></div>
+            <div class="header-content">
+                <header class="head-form">
+                    <h1>Sign Up</h1>
+                    <p>Sign up and find your love!</p>
+                </header>
+                <div class="inputs">
+
+                    <input class="Email" type="text" asp-for="Email" placeholder="Email" name="Email" autocomplete="off">
+                    <span asp-validation-for="Email">
+
+                    </span>
+
+                    <input class="UserName" type="text" asp-for="Username" placeholder="User name" autocomplete="off">
+                    <span asp-validation-for="Username">
+
+                    </span>
+
+                    <input class="Password" type="text" asp-for="Password" placeholder="Password" name="password" autocomplete="off">
+                    <span asp-validation-for="Password">
+
+                    </span>
+
+                    <input class="PasswordConfirm" type="text" asp-for="PasswordConfirm" placeholder="Password Confirm" name="PasswordConfirm" autocomplete="off">
+                    <span asp-validation-for="PasswordConfirm"> </span>
+                </div>
+                <div class="other">
+                    <button class="btn submits sign-up" type="submit"> Sign Up </button>
+
+                </div>
+                </div>
+        </form>
+    </div>
+
+
+
+    @section scripts{
+
+        <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+        <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    }
+
+
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+/*Обнуление*/
+
+/*--------------------*/
+/*Background vsego sayta*/
+
+
+body {
+    font-family: 'Vibur', cursive;
+    font-family: 'Abel', sans-serif;
+    opacity: .95;
+
+    
+}
+
+.background__image {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.background__image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.begin {
+    position: relative;
+}
+
+/*Background formi */
+form {
+    width: 600px;
+    height: auto;
+    border-radius: 30px 30px 5px 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d37272+1,5d7ecc+100&0.4+0,0.4+100 */
+    background: -moz-linear-gradient(-45deg, rgba(211, 114, 114, 0.4) 0%, rgba(211, 114, 114, 0.4) 1%, rgba(93, 126, 204, 0.4) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(211, 114, 114, 0.4) 0%, rgba(211, 114, 114, 0.4) 1%, rgba(93, 126, 204, 0.4) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(211, 114, 114, 0.4) 0%, rgba(211, 114, 114, 0.4) 1%, rgba(93, 126, 204, 0.4) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66d37272', endColorstr='#665d7ecc', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+
+}
+
+/*Zagolovok */
+header {
+    text-align: center;
+    position: relative;
+    top: 20px;
+
+}
+
+/* Login title form form */
+    header h1 {
+        font-size: 250%;
+        font-family: 'Playfair Display', serif;
+        color: #black;
+    }
+
+/*  A welcome message or an explanation of the login form */
+    header p {
+        letter-spacing: 0.10em;
+        font-family: 'Playfair Display', serif;
+        color: #black;
+    }
+
+input[type="text"] {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d37272+1,5d7ecc+100&0.4+0,0.4+100 */
+    background: -moz-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66d37272', endColorstr='#665d7ecc', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    width: 500px;
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Playfair Display', sans-serif;
+    color: black;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px 5px 5px 5px;
+    transition: 0.2s linear;
+    border-color: black;
+    margin: 15px auto;
+    display: block;
+    
+}
+
+.inputs {
+    margin-top: 50px;
+}
+
+input[type="text"]::placeholder {
+    color: #474242;
+}
+
+/*Soderjanie formi*/
+
+.sign-up {
+    display: block;
+    background: #B8F2E6;
+    font-family: 'Playfair Display', sans-serif;
+    color: #252537;
+    border: 1px solid;
+    border-color: black;
+    margin: 0 auto;
+    width: 280px;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s linear;
+    border-radius: 5px;
+    padding: 0 20px;
+    letter-spacing: 0.05em;
+}
+
+button:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+}
+
+button:hover {
+    animation: ani9 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes ani9 {
+    0% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(5px);
+    }
+}

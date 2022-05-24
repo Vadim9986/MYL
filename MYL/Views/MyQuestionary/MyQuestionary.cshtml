@@ -1,0 +1,138 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "MyQuestionary";
+    Layout = "_Layout2";
+}
+
+@model MYL.Models.Questionary
+<link href="~/css/nulstyle.css" rel="stylesheet" />
+<link href="~/css/MyQuest.css" rel="stylesheet" />
+    <div class="background__image">
+        <img src="~/img/background-g58d1214df_1920.jpg">
+    </div>
+    <div class="welcome_block">
+        <h1>Личный кабинет</h1>
+    </div>
+    <div class="myquest">
+        <div class="myquest__content">
+            <div class="myquest_leftblock">
+                <div class="Avatar">
+                    <div class="myphoto">
+                        @if (Model.Avatar is not null)
+                        {
+                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Avatar))" />
+
+                        }
+                        @if (Model.Avatar == null && Model.Gen == "Мужской")
+                        {
+
+                            <img src="~/img/мужской.png" />
+                        }
+                        @if (Model.Avatar == null && Model.Gen == "Женский")
+                        {
+                            <img src="~/img/женский.png" />
+                        }
+
+                    </div>
+                </div>
+            </div>
+            <div class="myquest_rightblock">
+                <div class="Name">
+                    <span class="text1">  @Model.Name</span>
+                </div>
+                <div class="Surname">
+                    Фамилия:
+                    <span class="text1">  @Model.Surname</span>
+                </div>
+                <div class="Gen">
+                    Пол:
+                    <span class="text1">     @Model.Gen</span>
+                </div>
+                <div class="Phone">
+                    Телефон:
+                    <span class="text1">  @Model.Phone</span>
+                </div>
+            </div>
+            <div class="myquest_rightblock_2">
+                <div class="Age">
+                    Возраст:
+                    <span class="text1">  @Model.Age</span>
+                </div>
+                <div class="Country">
+                    Страна:
+                    <span class="text1"> @Model.Country </span>
+                </div>
+                <div class="Region">
+                    Область:
+                    <span class="text1">@Model.Region</span>
+                </div>
+                <div class="City">
+                    Город:
+                    <span class="text1"> @Model.City</span>
+                </div>
+            </div>
+            <div class="myquest_rightblock_3">
+                <div class="About">
+                    О себе:
+                    <span class="text1">
+                        @Model.AboutYourself
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="button_block">
+            <a asp-action="Edit" asp-controller="Edit" class="button" >
+                <span class="button_line button_line--top"></span>
+                <span class="button_line button_line--right"></span>
+                <span class="button_line button_line--bottom"></span>
+                <span class="button_line button_line--left"></span>
+                Редактировать
+            </a>
+        </div>
+        <div class="Photos_name">
+            <span class="text1" id="text_image">Мои фотографии</span>
+        </div>
+        <div class=" Photos">
+            <div class="block_row">
+                @if (Model.Photos != null)
+                {
+
+                    @foreach (var item in Model.Photos)
+                    {
+                        <div class="block_column">
+                            <div class="block_item" id="fives_image">
+                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))"/>
+                            </div>
+                        </div>
+                        
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

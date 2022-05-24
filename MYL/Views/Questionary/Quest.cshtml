@@ -1,0 +1,97 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Questionary";
+    Layout = "_Layout";
+}
+@{ string photos = String.IsNullOrEmpty(ViewBag.IsFileValid) ? "Добавьте свои актуальные фото" : ViewBag.IsFileValid; }
+
+
+@model MYL.Models.Questionary
+<link href="~/css/nulstyle.css" rel="stylesheet" />
+<link href="~/css/Quest.css" rel="stylesheet" />
+<form asp-action="Quest" asp-controller="Questionary" method="post" enctype="multipart/form-data">
+    <div class="background__image">
+        <img src="~/img/background-g58d1214df_1920.jpg">
+    </div>
+    <div class="welcome_block">
+        <h1>Анкета</h1>
+    </div>
+    <div class="quest">
+        <div class="quest__conetnt">
+            <span class="display__text">Добавьте свое актуальное фото</span>
+            <div class="file-input">
+                <input type="file" name="avatar" id="file" class="file" accept=".jpg, .jpeg, .png, .webp">
+                <label for="file" class="file-name">
+                    Выберите аватар
+                </label>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Введите ваше имя</span>
+                <input type="text" asp-for="Name" placeholder="Полное имя" autocomplete="off">
+                <span class="validation" asp-validation-for="Name"> </span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Введите вашу фамилию</span>
+                <input type="text" asp-for="Surname" name="Surname" placeholder="Фамилия" autocomplete="off">
+                <span class="validation" asp-validation-for="Surname"> </span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Выберите ваш пол</span>
+                <select asp-for="Gen" name="Gen">
+                    <option value="Мужской" selected>Мужской</option>
+                    <option value="Женский">Женский</option>
+                </select>
+                <span class="validation" asp-validation-for="Gen"></span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Введите ваш возраст</span>
+                <input type="text"  asp-for="Age" name="Age" placeholder="Возраст" autocomplete="off" required>
+                <span class="validation" asp-validation-for="Age"></span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Введите ваш мобильный телефон</span>
+                <input type="text" asp-for="Phone" name="Phone" placeholder="Телефон" autocomplete="off" required>
+                <span class="validation" asp-validation-for="Phone"></span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Введите страну, в которой вы проживаете</span>
+                <input type="text" asp-for="Country" name="Country" placeholder="Страна" autocomplete="off">
+                <span class="validation" asp-validation-for="Country"> </span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Введите область, в которой вы проживаете</span>
+                <input type="text" asp-for="Region" name="Region" placeholder="Область" autocomplete="off">
+                <span class="validation" asp-validation-for="Region"> </span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Введите город, в котором вы проживаете</span>
+                <input type="text" asp-for="City" name="City" placeholder="Город" autocomplete="off">
+                <span class="validation" asp-validation-for="City"></span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Напишите то, что считаете важным о себе</span>
+                <textarea asp-for="AboutYourself" name="AboutYourself" placeholder="О себе" autocomplete="off"></textarea>
+                <span class="validation" asp-validation-for="AboutYourself"> </span>
+            </div>
+                <span class="display__text">@photos</span>
+                <div class="file-input">
+                    <input type="file" name="uploadedPhotos" multiple="true" id="filePhotos" class="file" accept=".jpg, .jpeg, .png, .webp">
+                    <label for="filePhotos" class="file-name">
+                        Выберите фотографии
+                    </label>
+                </div>
+
+                <button class="button" type="submit">
+                    <span class="button_line button_line--top"></span>
+                    <span class="button_line button_line--right"></span>
+                    <span class="button_line button_line--bottom"></span>
+                    <span class="button_line button_line--left"></span>
+                    <p>Cоздать анкету</p>
+                </button>
+            </div>
+        </div>
+
+</form>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="~/js/Quest.js"></script>
+

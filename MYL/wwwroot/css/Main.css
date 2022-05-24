@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+
+html,
+body {
+    height: 100%;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+}
+
+.background_image {
+
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    filter: blur(4px);
+}
+
+.background_image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.background_image_dark {
+    background: rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+
+}
+
+.begin {
+    position: relative;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0px auto;
+    padding: 0px 10px;
+}
+
+
+
+
+
+.content {
+    padding: 100px 0px 0px 0px;
+
+}
+
+.welcome_image {
+    width: 65%;
+    height: auto;
+    margin: 0 auto;
+
+}
+
+.welcome_image img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.block_row {
+
+    margin: 0px -10px 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.block_column {
+
+    width: 29%;
+    position: relative;
+    padding-top: 19%;
+    margin: 0 1% 10px 0;
+}
+
+.block_item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px;
+}
+
+.block_item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #f3218a;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 24px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    transition: 0.2s;
+    margin-left: 37%;
+}
+
+.button_line {
+    position: absolute;
+    display: block;
+}
+
+.button_line--top {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #f3218a);
+}
+
+.button:hover .button_line--top {
+    left: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.button_line--bottom {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #f3218a);
+}
+
+.button:hover .button_line--bottom {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.button_line--left {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, #f3218a);
+}
+
+.button:hover .button_line--left {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0s;
+}
+
+.button_line--right {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #f3218a);
+}
+
+.button:hover .button_line--right {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0s;
+}
+
+.button:hover {
+    box-shadow: 0 0 10px #f3218a, 0 0 40px #f3218a, 0 0 80px #f3218a;
+    background-color: #f3218a;
+    color: rgb(255, 255, 255);
+    transition-delay: 0.7s;
+}

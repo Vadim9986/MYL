@@ -1,0 +1,41 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="~/css/nulstyle.css" rel="stylesheet" />
+    <link href="~/css/Layout.css" rel="stylesheet" />
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    @RenderBody()
+    <header class="header">
+        <div class="container">
+            <div class="header_body">
+                <a asp-action="Index" asp-controller="Home" class="header_logo">
+                    <img src="~/img/a5f99949-7f60-4873-b33f-5f54342fa1cb.png" alt="">
+                </a>
+                <nav class="header_menu">
+                    <ul class="header_list">
+                        <li>
+                            <a asp-action="LoginTo" asp-controller="LoginTo" class="header_link">Вход</a>
+                        </li>
+                        <li>
+                            <a asp-action="Index" asp-controller="Home" class="header_link">Главная</a>
+                        </li>
+                        <li>
+                            <a asp-action="AboutUs" asp-controller="About" class="header_link">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header_link">Отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+</body>
+</html>

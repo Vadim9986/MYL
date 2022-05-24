@@ -1,0 +1,56 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+@model MYL.ViewModels.UserLogin
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="~/css/Login.css" rel="stylesheet" />
+
+</head>
+<body>
+
+    <div class="overlay">
+        <form asp-action="LoginTo" asp-controller="LoginTo">
+            <div class="con">
+                <header class="head-form">
+                    <h2>Log In</h2>
+                    <p>login here using your username and password</p>
+                </header>
+                <br>
+                <div class="field-set">
+                    <input class="form-input" id="txt-input" type="text" asp-for="Username" placeholder="Username">
+                    <br>
+                    <div class="input__box">
+                        <input class="form-input" id="pwd" type="text" asp-for=" Password" name="password"
+                               placeholder="Password">
+                        <span>
+                            <div class="fa fa-eye" aria-hidden="true" type="button" id="eye">
+                                <img src="~/img/118191.png"
+                                     alt="Alternate Text" />
+                            </div>
+                        </span>
+                    </div>
+                    <br>
+                    <button class="log-in"> Log In </button>
+                </div>
+                <div class="other">
+                    <button class="btn submits frgt-pass">Forgot Password</button>
+                    <button class="btn submits sign-up">
+                        <a asp-action="Regist" asp-controller="Regist">Sign Up</a>
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    </button>
+
+
+                </div>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/Login.js"></script>
+</body>
+</html>

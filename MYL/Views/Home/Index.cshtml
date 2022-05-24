@@ -1,0 +1,46 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "MeetYourLove";
+    Layout = "_Layout";
+}
+    <link href="~/css/nulstyle.css" rel="stylesheet" />
+    <link href="~/css/Main.css" rel="stylesheet" />
+    <div class="background_image">
+        <img src="~/img/background.jpg">
+        <div class="background_image_dark">
+        </div>
+    </div>
+    <div class="content">
+        <div class="container">
+            <h1 class="welcome_image">
+                <img src="~/img/d57a9f96-eab5-4506-9bf2-6a8fffff808a.png">
+            </h1>
+            <div class="block_row">
+                <div class="block_column">
+                    <div class="block_item" id="first_image"><img src="img/First.jpg"></div>
+                </div>
+                <div class="block_column">
+                    <div class="block_item" id="second_image"><img src="img/Second.jpg"></div>
+                </div>
+                <div class="block_column">
+                    <div class="block_item" id="third_image"><img src="img/Third.jpg"></div>
+                </div>
+                <div class="block_column">
+                    <div class="block_item" id="fourth_image"><img src="img/Fourth.jpg"></div>
+                </div>
+                <div class="block_column">
+                    <div class="block_item" id="fives_image"><img src="img/Fives.jpg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a asp-action="Regist" asp-controller="Regist" class="button">
+        <span class="button_line button_line--top"></span>
+        <span class="button_line button_line--right"></span>
+        <span class="button_line button_line--bottom"></span>
+        <span class="button_line button_line--left"></span>
+        Найти своё счастье
+    </a>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
