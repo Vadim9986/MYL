@@ -30,7 +30,8 @@ namespace MYL.Controllers
         {
             var userName = ControllerContext.HttpContext.Session.GetString("Name");
             person.User = _context.Users.FirstOrDefault(x => x.Username == userName);
-       
+            ViewBag.Account = userName;
+
 
             if (avatar != null)
             {

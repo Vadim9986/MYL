@@ -7,9 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="~/css/nulstyle.css" rel="stylesheet" />
     <link href="~/css/Layout.css" rel="stylesheet" />
+    <link href="~/css/Loading.css" rel="stylesheet" />
     <title>@ViewData["Title"]</title>
 </head>
 <body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <div class="preloader">
+        <div class="cssload-main">
+            <div class="cssload-heart">
+                <span class="cssload-heartL"></span>
+                <span class="cssload-heartR"></span>
+                <span class="cssload-square"></span>
+            </div>
+            <div class="cssload-shadow"></div>
+        </div>
+    </div>
     @RenderBody()
     <header class="header">
         <div class="container">
@@ -20,22 +32,54 @@
                 <nav class="header_menu">
                     <ul class="header_list">
                         <li>
-                            <a asp-action="LoginTo" asp-controller="LoginTo" class="header_link">Вход</a>
+                            <a asp-action="Index" asp-controller="Home" class="header_link">Home</a>
                         </li>
-                        <li>
-                            <a asp-action="Index" asp-controller="Home" class="header_link">Главная</a>
-                        </li>
-                        <li>
-                            <a asp-action="AboutUs" asp-controller="About" class="header_link">О нас</a>
-                        </li>
-                        <li>
-                            <a href="#" class="header_link">Отзывы</a>
-                        </li>
+                        @if (ViewBag.Account is null)
+                        {
+
+
+                            <li>
+                                <a asp-action="AboutUs" asp-controller="About" class="header_link">About</a>
+                            </li>
+                            <li>
+                                <a asp-action="Contact" asp-controller="Contact" class="header_link">Contact</a>
+                            </li>
+                            <li>
+                                <a asp-action="LoginTo" asp-controller="LoginTo" class="login header_link">
+                                    <i class="fa-solid fa-right-to-bracket"></i>
+                                    <span> LOG IN</span>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a asp-action="Regist" asp-controller="Regist" class="login header_link">
+                                    <i class="fa-solid fa-user-plus"></i>
+                                    <span> SIGN UP</span>
+                                </a>
+
+                            </li>
+                        }
+                        else
+                        {
+
+                            <li>
+                                <a href="#" class="header_link">Личный кабинет</a>
+                            </li>
+                            <li>
+                                <a href="#" class="header_link">Поиск</a>
+                            </li>
+                            <li>
+                                <a href="#" class="header_link">Выйти</a>
+                            </li>
+                        }
                     </ul>
                 </nav>
             </div>
         </div>
-
     </header>
+
+    <script src="https://kit.fontawesome.com/7bec2b2bb6.js" crossorigin="anonymous"></script>
+    <script src="~/js/loader.js"></script>
+
 </body>
 </html>

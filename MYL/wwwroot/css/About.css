@@ -4,7 +4,6 @@
 html,
 body {
     height: 100%;
-    font-family: 'Playfair Display', sans-serif;
     font-weight: 500;
 }
 
@@ -63,7 +62,7 @@ body {
 }
 
 .container__flex__item {
-    width: 34%;
+    width: 100%;
     height: auto;
 }
 
@@ -76,7 +75,7 @@ body {
     width: 100%;
     height: auto;
     background: rgba(243, 33, 138, 0.5);
-    padding: 20px;
+    padding: 40px 20px;
     border-radius: 30px;
 }
 
@@ -85,7 +84,7 @@ body {
 }
 
 .text1 {
-    color: white;
+    color: black;
     font-family: 'Playfair Display';
     font-size: 30px;
     letter-spacing: 4px;
@@ -100,7 +99,7 @@ body {
     letter-spacing: 4px;
     font-weight: 800;
     text-align: center;
-    color: #f3218a;
+    color: black;
 }
 
 .container__flex__item__block img {

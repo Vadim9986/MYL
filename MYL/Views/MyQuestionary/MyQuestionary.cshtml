@@ -1,7 +1,7 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "MyQuestionary";
-    Layout = "_Layout2";
+    Layout = "_Layout";
 }
 
 @model MYL.Models.Questionary
@@ -23,12 +23,12 @@
                             <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Avatar))" />
 
                         }
-                        @if (Model.Avatar == null && Model.Gen == "Мужской")
+                        @if (Model.Avatar == null && Model.Gen == "Male")
                         {
 
                             <img src="~/img/мужской.png" />
                         }
-                        @if (Model.Avatar == null && Model.Gen == "Женский")
+                        @if (Model.Avatar == null && Model.Gen == "Female")
                         {
                             <img src="~/img/женский.png" />
                         }
@@ -38,6 +38,7 @@
             </div>
             <div class="myquest_rightblock">
                 <div class="Name">
+                    Имя:
                     <span class="text1">  @Model.Name</span>
                 </div>
                 <div class="Surname">
@@ -111,7 +112,7 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 
 

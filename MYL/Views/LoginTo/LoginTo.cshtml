@@ -1,56 +1,41 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    Layout = null;
+    ViewData["Title"] = "LoginTo";
+    Layout = "_Layout";
 }
 @model MYL.ViewModels.UserLogin
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="~/css/Login.css" rel="stylesheet" />
 
-</head>
-<body>
-
-    <div class="overlay">
-        <form asp-action="LoginTo" asp-controller="LoginTo">
-            <div class="con">
-                <header class="head-form">
-                    <h2>Log In</h2>
-                    <p>login here using your username and password</p>
-                </header>
-                <br>
-                <div class="field-set">
-                    <input class="form-input" id="txt-input" type="text" asp-for="Username" placeholder="Username">
-                    <br>
-                    <div class="input__box">
-                        <input class="form-input" id="pwd" type="text" asp-for=" Password" name="password"
-                               placeholder="Password">
-                        <span>
-                            <div class="fa fa-eye" aria-hidden="true" type="button" id="eye">
-                                <img src="~/img/118191.png"
-                                     alt="Alternate Text" />
-                            </div>
-                        </span>
-                    </div>
-                    <br>
-                    <button class="log-in"> Log In </button>
+<link href="~/css/nulstyle.css" rel="stylesheet" />
+<link href="~/css/Login.css" rel="stylesheet" />
+<div class="background__image">
+    <img src="~/img/16846.jpg">
+</div>
+<div class="begin">
+    <form asp-action="LoginTo" asp-controller="LoginTo">
+        <div class="main-content">
+            <div class="head-form">
+                <h1>LogIn</h1>
+            </div>
+            <div class="inputs">
+                <div class="UserName">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" asp-for="Username" placeholder="User name">
                 </div>
-                <div class="other">
-                    <button class="btn submits frgt-pass">Forgot Password</button>
-                    <button class="btn submits sign-up">
-                        <a asp-action="Regist" asp-controller="Regist">Sign Up</a>
-                        <i class="fa fa-user-plus" aria-hidden="true"></i>
-                    </button>
-
-
+                <div class="Password">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" asp-for="Password"  name="password" placeholder="Password" id="pwd">
+                    <i class="fa-solid fa-eye"></i>
                 </div>
-        </form>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="~/js/Login.js"></script>
-</body>
-</html>
+            </div>
+            <div class="other">
+                <a asp-action="Regist" asp-controller="Regist" class="sign-up">
+                  Sign Up 
+                </a>
+                    <button class="pas_forgot">Forgot Password</button>
+</div>
+        </div>
+    </form>
+</div>
+
+<script src="~/js/Login.js"></script>
+

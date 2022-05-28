@@ -1,0 +1,61 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "_Layout";
+}
+<link href="~/css/nulstyle.css" rel="stylesheet" />
+<link href="~/css/Contact.css" rel="stylesheet" />
+<div class="background_image">
+    <img src="~/img/background-g58d1214df_1920.jpg">
+    <div class="background_image_dark">
+    </div>
+</div>
+<div class="content">
+    <div class="welcome_block">
+        <h1>Contact</h1>
+    </div>
+    <div class="main_content">
+        <div class="left_column">
+            <h2> Don`t Be A Stranger Just Say Hello</h2>
+            <p class="text_und">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quis.</p>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" name="subject" placeholder="Subject">
+                <input type="tel" name="nummber" placeholder="Mobile Number">
+                <textarea name="message" placeholder="Message"></textarea>
+            </form>
+            <div class="button_smbt">
+                <button type="submit" class="smbt-btn">
+                    <span> Send Our Message</span>
+                </button>
+            </div>
+        </div>
+        <div class="right_column">
+            <h3> Get Information</h3>
+            <p class="text_und">Our Contact information Details and Follow us on social media</p>
+            <div class="information">
+                <div class="office">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span class="title_und"> Office Adress</span>
+                    <p class="text_und_2"> Stanislavskogo, 190</p>
+                </div>
+                <div class="phone">
+                    <i class="fa-solid fa-phone-volume"></i>
+                    <span class="title_und"> Phone Number</span>
+                    <p class="text_und_2"> +3809877328</p>
+                </div>
+                <div class="email">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <span class="title_und"> Send Mail</span>
+                    <p class="text_und_2"> yourmail@mail.com</p>
+                </div>
+                <div class="website">
+                    <i class="fa-solid fa-globe"></i>
+                    <span class="title_und"> Our Website</span>
+                    <p class="text_und_2"> www.yoursite.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
+
+
+html,
+body {
+    height: 100%;
+    font-family: 'Playfair Display', sans-serif;
+    font-weight: 500;
+}
+
+.background__image {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.background__image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#2e97e8+0,f3218a+100&0.5+0,0.5+100 */
+    background: -moz-linear-gradient(left, rgba(46, 151, 232, 0.5) 0%, rgba(243, 33, 138, 0.5) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(46, 151, 232, 0.5) 0%, rgba(243, 33, 138, 0.5) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(46, 151, 232, 0.5) 0%, rgba(243, 33, 138, 0.5) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#802e97e8', endColorstr='#80f3218a', GradientType=1);
+    /* IE6-9 */
+
+
+}
+
+.header_body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+}
+
+.header_logo {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    margin-left: 80px;
+
+}
+
+.header_logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.header_list {
+    display: flex;
+}
+
+.header_list li {
+    list-style: none;
+}
+
+.header_list li:hover {
+    transform: translatey(3px);
+    box-shadow: none;
+    transition: all 0.2s ease 0s;
+}
+
+li:hover .header_link {
+    color: #ddd;
+}
+
+.header_link {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 40px;
+
+}
+
+nav {
+    margin-right: 60px;
+}
+
+.welcome_block {
+    font-family: 'Playfair Display';
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 150px;
+
+
+}
+
+.search_block {
+    padding: 20px;
+    background: #f3218a;
+    margin-top: 50px;
+    position: relative;
+}
+
+.filter_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+select,
+button {
+    height: 40px;
+    width: auto;
+    background: #9a12b3;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.flex_block_age {
+    display: flex;
+    justify-content: space-around;
+    width: 130px;
+}
+
+.fa-solid.fa-magnifying-glass {
+    margin: 5px 0 0 5px;
+}
+
+
+.second_block {
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
+}
+
+.member_info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 30px 0 30px;
+
+}
+
+.all__member {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.text_1 {
+
+    height: 40px;
+    width: 100px;
+    background: #9a12b3;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 5px 0px 0px 5px;
+
+}
+
+.text_2 {
+    height: 40px;
+    width: 100px;
+    background: #f3218a;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+.row {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user_block {
+    background: #f3218a;
+    width: 240px;
+    height: 300px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.user_block:hover {
+    background: #9a12b3;
+    cursor: pointer;
+}
+
+.photo_block {
+    padding: 10px;
+}
+
+.photo_block img {
+    height: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.user_info {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Playfair Display';
+    margin-top: 40px;
+}

@@ -21,8 +21,9 @@ namespace MYL.Controllers
         {
             var userName= ControllerContext.HttpContext.Session.GetString("Name");
             var user = _context.People.Include(x=>x.User).Include(x=>x.Photos).FirstOrDefault(x => x.User.Username == userName);
-       
-            
+            ViewBag.Account = userName;
+
+
             return View(user);
         }
     }

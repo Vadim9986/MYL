@@ -4,7 +4,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Vibur', cursive;
     font-weight: 500;
 }
 
@@ -131,6 +131,7 @@ textarea::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Playfair Display';
     color: black;
     cursor: pointer;
     transition: transform .2s ease-out;

@@ -36,4 +36,50 @@
     <Folder Include="wwwroot\Files\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\js\quickbox\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\css\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\js\quickbox\highlight\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\highlight\etc.js" />
+    <None Include="wwwroot\js\quickbox\highlight\highlight.js" />
+    <None Include="wwwroot\js\quickbox\highlight\styles\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\index.php" />
+    <None Include="wwwroot\js\quickbox\i\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\qb\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\qb\js\html5shiv.js" />
+    <None Include="wwwroot\js\quickbox\qb\js\jquery-1.4.4.js" />
+    <None Include="wwwroot\js\quickbox\qb\js\qb.js" />
+    <None Include="wwwroot\js\quickbox\qb\qb.scss" />
+    <None Include="wwwroot\js\quickbox\qb\_vars.scss" />
+    <None Include="wwwroot\js\quickbox\quickbox\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\quickbox\css\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\quickbox\fonts\glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\js\quickbox\quickbox\highlight\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\quickbox\highlight\etc.js" />
+    <None Include="wwwroot\js\quickbox\quickbox\highlight\highlight.js" />
+    <None Include="wwwroot\js\quickbox\quickbox\highlight\styles\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\quickbox\index.php" />
+    <None Include="wwwroot\js\quickbox\quickbox\i\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\quickbox\qb\.DS_Store" />
+    <None Include="wwwroot\js\quickbox\quickbox\qb\js\html5shiv.js" />
+    <None Include="wwwroot\js\quickbox\quickbox\qb\js\jquery-1.4.4.js" />
+    <None Include="wwwroot\js\quickbox\quickbox\qb\js\qb.js" />
+    <None Include="wwwroot\js\quickbox\quickbox\qb\qb.scss" />
+    <None Include="wwwroot\js\quickbox\quickbox\qb\_vars.scss" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\._.DS_Store" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\._fonts" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\._highlight" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\css\._.DS_Store" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\fonts\._glyphicons-halflings-regular.svg" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\highlight\._.DS_Store" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\highlight\._highlight.js" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\highlight\._styles" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\highlight\styles\._.DS_Store" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\i\._.DS_Store" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\qb\._.DS_Store" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\qb\js\._html5shiv.js" />
+    <None Include="wwwroot\js\__MACOSX\quickbox\qb\js\._jquery-1.4.4.js" />
+  </ItemGroup>
+
 </Project>

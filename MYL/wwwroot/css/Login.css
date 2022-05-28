@@ -1,154 +1,171 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
+
 body {
-    background: url("..//img/16846.jpg") 0 0/100% no-repeat;
-    font-family: 'Vibur', cursive;
-    font-family: 'Abel', sans-serif;
-    
+    opacity: .95;
 }
 
+.background__image {
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.background__image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.begin {
+    position: relative;
+    margin-top: 200px;
+}
+
+/*Background formi */
 form {
-    width: 450px;
-    min-height: 500px;
+    width: 600px;
     height: auto;
-    border-radius: 5px;
+    border-radius: 10px 10px 10px 10px;
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    background: -webkit-linear-gradient(-45deg, rgba(227,253,245,0.7) 0%,rgba(227,253,245,0.7) 50%,rgba(255,230,250,0.7) 52%,rgba(255,230,250,0.7) 100%); 
-    background: linear-gradient(135deg, rgba(227,253,245,0.7) 0%,rgba(227,253,245,0.7) 50%,rgba(255,230,250,0.7) 52%,rgba(255,230,250,0.7) 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3e3fdf5', endColorstr='#b3ffe6fa',GradientType=1 ); 
-}
-form .con {
-    display: -webkit-flex;
-    display: flex;
-  
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-  
-    -webkit-flex-wrap: wrap;
-    flex-wrap: wrap;
-  
-      margin: 0 auto;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d37272+1,5d7ecc+100&0.4+0,0.4+100 */
+    background: -moz-linear-gradient(-45deg, rgba(211, 114, 114, 0.4) 0%, rgba(211, 114, 114, 0.4) 1%, rgba(93, 126, 204, 0.4) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(211, 114, 114, 0.4) 0%, rgba(211, 114, 114, 0.4) 1%, rgba(93, 126, 204, 0.4) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(211, 114, 114, 0.4) 0%, rgba(211, 114, 114, 0.4) 1%, rgba(93, 126, 204, 0.4) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66d37272', endColorstr='#665d7ecc', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+
 }
 
-header {
-    margin: 2% auto 10% auto;
+/*Zagolovok */
+.head-form {
     text-align: center;
+    position: relative;
+    top: 20px;
+
 }
-header h2 {
+
+/* Login title form form */
+.head-form h1 {
     font-size: 250%;
     font-family: 'Playfair Display', serif;
-    color: #3e403f;
-}
-header p {letter-spacing: 0.05em;}
-.input-item {
-    background: #fff;
-    color: #333;
-    padding: 14.5px 0px 15px 9px;
-    border-radius: 5px 0px 0px 5px;
-}
-#eye {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    right: 5%;
-    top: 28%;
-    cursor: pointer;
-}
+    color: black;
 
-    #eye img {
-        width: 100%;
-        height: 100%;
-    }
-
-.input__box {
-    position: relative;
 }
-
-input[class="form-input"]{
-    width: 280px;
+.Password{
+    position:relative;
+}
+/*  A welcome message or an explanation of the login form */
+input[type="text"],
+input[type="password"] {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d37272+1,5d7ecc+100&0.4+0,0.4+100 */
+    background: -moz-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66d37272', endColorstr='#665d7ecc', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    width: 500px;
     height: 50px;
-  
-    margin-top: 2%;
-    padding: 15px;
-    
+    padding: 15px 35px 15px 15px;
     font-size: 16px;
-    font-family: 'Abel', sans-serif;
-    color: #5E6472;
-  
+    font-family: 'Playfair Display', sans-serif;
+    color: black;
     outline: none;
-    border: none;
-  
-    border-radius: 0px 5px 5px 0px;
+    border: 1px solid;
+    border-radius: 5px 5px 5px 5px;
     transition: 0.2s linear;
-    border: 2px solid;
-    border-color:black;
-    
-}
-input[id="txt-input"] {
-    width: 280px;
-    border: 2px solid;
     border-color: black;
-}
-input:focus {
-    transform: translateX(-2px);
-    border-radius: 5px;
+    margin: 15px 9px;
+    display: block;
 }
 
-button {
-    display: inline-block;
+.inputs {
+    margin-top: 50px;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #474242;
+}
+
+i.fa-solid.fa-at::before {
+    display: block;
+}
+i.fa-solid.fa-eye::before{
+    cursor:pointer;
+    position:absolute;
+    right:6%;
+    bottom: 40%;
+
+}
+
+.Email,
+.UserName,
+.Password,
+.PasswordConfirm {
+    display: flex;
+    align-items: center;
+}
+
+/*Soderjanie formi*/
+.other {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sign-up,
+.pas_forgot {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background: #B8F2E6;
+    font-family: 'Playfair Display', sans-serif;
     color: #252537;
-    width: 280px;
+    border: 1px solid;
+    border-color: black;
+    margin: 0 auto;
+    width: 150px;
     height: 50px;
-    padding: 0 20px;
-    background: #fff;
-    border-radius: 5px;
-    outline: none;
     cursor: pointer;
     text-align: center;
     transition: all 0.2s linear;
-    margin: 7% auto;
+    border-radius: 5px;
+    padding: 0 20px;
     letter-spacing: 0.05em;
-    border: 2px solid;
-    border-color: black;
-}
-.submits {
-    width: 48%;
-    display: inline-block;
-    float: left;
-    margin-left: 2%;
 }
 
-.frgt-pass {background: transparent;}
+    .sign-up:hover,
+    .pas_forgot:hover {
+        transform: translatey(3px);
+        box-shadow: none;
+    }
 
-.sign-up {
-    background: #B8F2E6;
-    border: 2px solid;
-    border-color: black;
-}
+    .sign-up:hover,
+    .pas_forgot:hover {
+        animation: ani9 0.4s ease-in-out infinite alternate;
+    }
 
-button:hover {
-    transform: translatey(3px);
-    box-shadow: none;
-}
-
-button:hover {
-    animation: ani9 0.4s ease-in-out infinite alternate;
-}
 @keyframes ani9 {
     0% {
         transform: translateY(3px);
     }
+
     100% {
         transform: translateY(5px);
     }
-}
-a {
-    color: black;
-    text-decoration:none;
 }
