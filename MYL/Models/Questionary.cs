@@ -21,7 +21,7 @@ namespace MYL.Models
         [RegularExpression(@"[0-9]+", ErrorMessage = "Некорректный мобильный телефон")]
         public int Phone { get; set; }
         [Required(ErrorMessage = "Пожалуйста, укажите свой возраст")]
-        [Range(16, 110, ErrorMessage = "Недопустимый возраст")]
+        [Range(18, 110, ErrorMessage = "Недопустимый возраст")]
         public int Age { get; set; }
         [Required(ErrorMessage = "Пожалуйста, укажите страну")]
         public string Country { get; set; }

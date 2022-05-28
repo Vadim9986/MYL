@@ -1,6 +1,6 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
-    ViewData["Title"] = "LoginTo";
+    ViewData["Title"] = "LoginToAccount";
     Layout = "_Layout";
 }
 @model MYL.ViewModels.UserLogin
@@ -11,7 +11,7 @@
     <img src="~/img/16846.jpg">
 </div>
 <div class="begin">
-    <form asp-action="LoginTo" asp-controller="LoginTo">
+    <form asp-action="LoginToAccount" asp-controller="LoginToAccount">
         <div class="main-content">
             <div class="head-form">
                 <h1>LogIn</h1>
@@ -26,6 +26,7 @@
                     <input type="password" asp-for="Password"  name="password" placeholder="Password" id="pwd">
                     <i class="fa-solid fa-eye"></i>
                 </div>
+                <input type="submit" name="name" value="ВОЙТИ" />
             </div>
             <div class="other">
                 <a asp-action="Regist" asp-controller="Regist" class="sign-up">

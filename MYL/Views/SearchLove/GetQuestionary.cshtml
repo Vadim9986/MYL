@@ -1,0 +1,16 @@
+﻿@using MYL.Models;
+@model IEnumerable<Questionary>
+
+@foreach (var u in Model)
+{
+    <div class="user_block">
+        <div class="photo_block">
+            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(u.Avatar))">
+        </div>
+        <div class="user_info">
+            @u.Name
+            <br />
+            @u.Surname
+        </div>
+    </div>
+}

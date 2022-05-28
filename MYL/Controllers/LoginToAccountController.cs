@@ -10,20 +10,20 @@ using MYL.ViewModels;
 
 namespace MYL.Controllers
 {
-    public class LoginToController : Controller
+    public class LoginToAccountController : Controller
     {
         private readonly DataBaseContext db;
-        public LoginToController(DataBaseContext db)
+        public LoginToAccountController(DataBaseContext db)
         {
             this.db = db;
         }
         [HttpGet]
-        public IActionResult LoginTo()
+        public IActionResult LoginToAccount()
         {
             return View();
         }
         [HttpPost]
-        public IActionResult LoginTo(UserLogin user)
+        public IActionResult LoginToAccount(UserLogin user)
         {
             var userFromDb = db.Users.ToList().FirstOrDefault(x => x.Username== user.Username);
             if (userFromDb is not null && userFromDb.Password == user.Password)

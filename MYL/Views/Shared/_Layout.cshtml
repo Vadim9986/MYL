@@ -45,7 +45,7 @@
                                 <a asp-action="Contact" asp-controller="Contact" class="header_link">Contact</a>
                             </li>
                             <li>
-                                <a asp-action="LoginTo" asp-controller="LoginTo" class="login header_link">
+                                <a asp-action="LoginToAccount" asp-controller="LoginToAccount" class="login header_link">
                                     <i class="fa-solid fa-right-to-bracket"></i>
                                     <span> LOG IN</span>
                                 </a>
@@ -63,10 +63,10 @@
                         {
 
                             <li>
-                                <a href="#" class="header_link">Личный кабинет</a>
+                                <a asp-controller="MyQuestionary" asp-action="MyQuestionary" class="header_link">Личный кабинет</a>
                             </li>
                             <li>
-                                <a href="#" class="header_link">Поиск</a>
+                                <a asp-controller="SearchLove" asp-action="SearchLove" class="header_link">Поиск</a>
                             </li>
                             <li>
                                 <a href="#" class="header_link">Выйти</a>

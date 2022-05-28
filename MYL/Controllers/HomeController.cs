@@ -13,12 +13,7 @@ namespace MYL.Controllers
         {
             var user = HttpContext.Session.GetString("Name");
             ViewBag.Account = user;
-            if(user is null)
-            {
                 return View();
-            }
-            return Redirect("../Questionary/Quest");
-            
         }
         public IActionResult ExitAccount()
         {
