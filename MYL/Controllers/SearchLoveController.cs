@@ -21,13 +21,25 @@ namespace MYL.Controllers
         {
             var user = HttpContext.Session.GetString("Name");
             ViewBag.Account = user;
+            ViewBag.CountUser = _db.Users.Count();
             return View();
         }
-
+        [HttpPost]
         public ViewResult GetQuestionary(SearchViewModel search)
         {
-            var model = _db.People.Include(x => x.User).Where(x => x.Age >= search.AgeStart && x.Age <= search.AgeEnd).ToList();
+           var model = _db.People.Include(x => x.User).Where(x => x.Age >= search.AgeStart && x.Age<=search.AgeEnd);  
+            model = model.Where(x => x.Gen.Contains(search.Gender));
+            model = model.Where(x => x.Country.Contains(search.Country));
+            switch (search.Sort)
+            {
+                
+                
+              
+            }
+
+
             return View(model);
         }
+        
     }
 }

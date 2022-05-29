@@ -14,6 +14,9 @@ namespace MYL.Controllers
             var userName = ControllerContext.HttpContext.Session.GetString("Name");
             ViewBag.Account = userName;
             return View();
+            
         }
     }
 }
+
+

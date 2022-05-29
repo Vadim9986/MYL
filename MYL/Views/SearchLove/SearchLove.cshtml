@@ -6,6 +6,7 @@
 }
 <link href="~/css/nulstyle.css" rel="stylesheet" />
 <link href="~/css/Search.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 
@@ -99,7 +100,9 @@
         <div class="member_info">
             <div class="all__member">
                 <div class="text_1"> All Members</div>
-                <div class="text_2"> 1231</div>
+                <div class="text_2">
+           @ViewBag.CountUser  
+                </div>
             </div>
             <div class="member__time__regist">
                 <div class="custom-select">

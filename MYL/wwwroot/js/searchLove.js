@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
     searchLove();
+    console.log(9);
 });
 
 function searchLove() {
@@ -9,7 +10,13 @@ function searchLove() {
     let ageEnd = $('.age_end').val()
     let country = $('.search__country').val()
     let sort = $('.select_regist').val()
-    console.log(ageStart)
+    let search = {
+        Gender: gender,
+        AgeStart: ageStart,
+        AgeEnd: ageEnd,
+        Country: country,
+        Sort: sort
+    }
     formData.append("Gender", gender);
     formData.append("AgeStart", ageStart);
     formData.append("AgeEnd", ageEnd);
@@ -19,12 +26,13 @@ function searchLove() {
     $.ajax({
         url: "../SearchLove/GetQuestionary",
         type: 'POST',
-        cache: false,
-        contentType: false,
-        processData: false,
-        data: formData,
+        data: {
+            search: search
+        },
         success: function (response) {
+            console.log(response);
             $('.row').html(response);
+           
         }
     });
 }
