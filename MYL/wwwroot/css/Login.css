@@ -36,16 +36,11 @@ form {
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d37272+1,5d7ecc+100&0.4+0,0.4+100 */
-    background: -moz-linear-gradient(-45deg, rgba(211, 114, 114, 0.4) 0%, rgba(211, 114, 114, 0.4) 1%, rgba(93, 126, 204, 0.4) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, rgba(211, 114, 114, 0.4) 0%, rgba(211, 114, 114, 0.4) 1%, rgba(93, 126, 204, 0.4) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, rgba(211, 114, 114, 0.4) 0%, rgba(211, 114, 114, 0.4) 1%, rgba(93, 126, 204, 0.4) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66d37272', endColorstr='#665d7ecc', GradientType=1);
-    /* IE6-9 fallback on horizontal gradient */
-
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45b9ef+0,f79e31+100&0.3+0,0.3+100 */
+    background: -moz-linear-gradient(-45deg, rgba(69,185,239,0.3) 0%, rgba(247,158,49,0.3) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(69,185,239,0.3) 0%,rgba(247,158,49,0.3) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(69,185,239,0.3) 0%,rgba(247,158,49,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d45b9ef', endColorstr='#4df79e31',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
 /*Zagolovok */
@@ -69,15 +64,12 @@ form {
 /*  A welcome message or an explanation of the login form */
 input[type="text"],
 input[type="password"] {
-    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d37272+1,5d7ecc+100&0.4+0,0.4+100 */
-    background: -moz-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66d37272', endColorstr='#665d7ecc', GradientType=1);
-    /* IE6-9 fallback on horizontal gradient */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45b9ef+0,f79e31+100&0.3+0,0.3+100 */
+    background: -moz-linear-gradient(-45deg, rgba(69,185,239,0.6) 0%, rgba(247,158,49,0.6) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(69,185,239,0.6) 0%,rgba(247,158,49,0.6) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(69,185,239,0.3) 0%,rgba(247,158,49,0.3) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d45b9ef', endColorstr='#4df79e31',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
     width: 500px;
     height: 50px;
     padding: 15px 35px 15px 15px;
@@ -127,19 +119,24 @@ i.fa-solid.fa-eye::before{
     display: flex;
     justify-content: space-between;
 }
-
 .sign-up,
 .pas_forgot {
+    width: 150px;
+    background: #f3218a;
+    color: white;
+}
+.sign-up,
+.pas_forgot,
+.login_acc {
     display: flex;
-    justify-content:center;
-    align-items:center;
-    background: #B8F2E6;
+    justify-content: center;
+    align-items: center;
+    
     font-family: 'Playfair Display', sans-serif;
-    color: #252537;
+    
     border: 1px solid;
     border-color: black;
     margin: 0 auto;
-    width: 150px;
     height: 50px;
     cursor: pointer;
     text-align: center;
@@ -148,12 +145,23 @@ i.fa-solid.fa-eye::before{
     padding: 0 20px;
     letter-spacing: 0.05em;
 }
+.login_acc {
+    width: 430px;
+    background: #B8F2E6;
+}
+        .login_acc:hover {
+            transform: translatey(3px);
+            box-shadow: none;
+            animation: ani9 0.4s ease-in-out infinite alternate;
+        }
 
-    .sign-up:hover,
-    .pas_forgot:hover {
-        transform: translatey(3px);
-        box-shadow: none;
-    }
+
+
+        .sign-up:hover,
+        .pas_forgot:hover {
+            transform: translatey(3px);
+            box-shadow: none;
+        }
 
     .sign-up:hover,
     .pas_forgot:hover {

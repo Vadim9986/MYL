@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using MYL.Models;
 using MYL.DataBase;
+using MYL.Services;
 
 namespace MYL
 {
@@ -28,6 +29,7 @@ namespace MYL
             services.AddDbContext<DataBaseContext>();
             services.AddControllersWithViews();
             services.AddSession();
+            services.AddTransient<Service>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

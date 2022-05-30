@@ -18,18 +18,19 @@
         <div class="left_column">
             <h2> Don`t Be A Stranger Just Say Hello</h2>
             <p class="text_und">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, quis.</p>
-            <form class="contact-form">
+            <form asp-controller="Contact" asp-action="SendEmail" class="contact-form">
                 <input type="text" name="name" placeholder="Name">
                 <input type="email" name="email" placeholder="Email">
                 <input type="text" name="subject" placeholder="Subject">
                 <input type="tel" name="nummber" placeholder="Mobile Number">
                 <textarea name="message" placeholder="Message"></textarea>
+                <div class="button_smbt">
+                    <button type="submit" class="smbt-btn">
+                        <span> Send Our Message</span>
+                    </button>
+                </div>
             </form>
-            <div class="button_smbt">
-                <button type="submit" class="smbt-btn">
-                    <span> Send Our Message</span>
-                </button>
-            </div>
+           
         </div>
         <div class="right_column">
             <h3> Get Information</h3>
