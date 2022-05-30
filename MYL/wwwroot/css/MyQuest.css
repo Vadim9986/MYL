@@ -134,6 +134,7 @@ h1 {
     padding-top: 56%;
     border-radius: 20%;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .block_item img {
@@ -143,6 +144,14 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit:cover;
+}
+._active__photo {
+    transform: scale(0.6);
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    position: fixed;
+    border-radius: 0;
 }
 
 .text_2 {
