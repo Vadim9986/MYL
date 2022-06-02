@@ -34,7 +34,7 @@ namespace MYL.Services
             throw new NotImplementedException();
         }
 
-        public void EditUser(Questionary newUser, string userName, IFormFile uploadedFile)
+        public void EditUser(Questionary newUser, string userName, IFormFile uploadedFile, IFormFileCollection uploadedPhotos)
         {
             var user = _db.People.Include(x => x.User).Include(x => x.Photos).ToList().FirstOrDefault(x => x.User.Username == userName);
             user.Avatar = uploadedFile is null ? user.Avatar : _fileService.FromImageToByte(uploadedFile); 
@@ -50,10 +50,11 @@ namespace MYL.Services
             user.Telegram = newUser.Telegram;
             user.EmailContact = newUser.EmailContact;
             user.Facebook = newUser.Facebook;
+            user.Photos = uploadedPhotos is null ? user.Photos : EditUserPhoto(newUser, uploadedPhotos);
             _db.SaveChanges();
         }
 
-        public void EditUserPhoto(Questionary newUser, IFormFileCollection uploadedPhotos)
+        public List<Photo> EditUserPhoto(Questionary newUser, IFormFileCollection uploadedPhotos)
         {
             List<byte[]> byteFiles = new List<byte[]>();
             if (uploadedPhotos != null)
@@ -68,12 +69,16 @@ namespace MYL.Services
                 }
             }
 
+            var questionaries = _db.People.Where(x => x.Id == newUser.Id);
+            _db.People.RemoveRange(questionaries);
+            _db.SaveChanges();
+
             List<Photo> photos = new();
             foreach (var file in byteFiles)
             {
                 photos.Add(new Photo(file));
             }
-            newUser.Photos = photos;
+            return photos;
         }
     }
 }

@@ -10,8 +10,8 @@ namespace MYL.Interfaces
    public interface IUserService
     {
         public void ChangePassword(User user, string password);
-        public void EditUser(Questionary newUser, string userEmail, IFormFile uploadedFile);
-        public void EditUserPhoto(Questionary user, IFormFileCollection uploadedPhotos);
+        public void EditUser(Questionary newUser, string userName, IFormFile uploadedFile, IFormFileCollection uploadedPhotos);
+        public List<Photo> EditUserPhoto(Questionary newUser, IFormFileCollection uploadedPhotos);
         public User Get(string username);
     }
 

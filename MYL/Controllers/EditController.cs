@@ -28,7 +28,17 @@ namespace MYL.Controllers
             ViewBag.Account = userName;
             return View(user);
         }
- 
-        
+
+        public IActionResult EditUser(Questionary questionary, IFormFile uploadedFile, IFormFileCollection uploadedPhotos)
+        {
+            var userName = ControllerContext.HttpContext.Session.GetString("Name");
+            if (ModelState.IsValid)
+            {
+                _UserService.EditUser(questionary, userName, uploadedFile, uploadedPhotos);
+                return Redirect("../MyQuestionary/MyQuestionary");
+            }
+            ViewBag.Account = userName;
+            return View();
+        }
     }
 }

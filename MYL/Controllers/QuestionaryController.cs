@@ -9,16 +9,19 @@ using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using MYL.Models;
 using MYL.ViewModels;
+using MYL.Interfaces;
 
 namespace MYL.Controllers
 {
     public class QuestionaryController : Controller
     {
         DataBaseContext _context;
+        IUserService _userService;
 
-        public QuestionaryController(DataBaseContext context)
+        public QuestionaryController(DataBaseContext context, IUserService userService)
         {
             _context = context;
+            _userService = userService;
         }
         public IActionResult Quest()
         {
@@ -31,38 +34,6 @@ namespace MYL.Controllers
             var userName = ControllerContext.HttpContext.Session.GetString("Name");
             person.User = _context.Users.FirstOrDefault(x => x.Username == userName);
             ViewBag.Account = userName;
-
-
-            if (avatar != null)
-            {
-                byte[] imageData = null;
-                using (var binaryReader = new BinaryReader(avatar.OpenReadStream()))
-                {
-                    imageData = binaryReader.ReadBytes((int)avatar.Length);
-                }
-                person.Avatar = imageData;
-            }
-
-            List<byte[]> byteFiles = new List<byte[]>();
-            if (uploadedPhotos != null)
-            {
-                foreach (var item in uploadedPhotos)
-            {
-                    byte[] imageData = null;
-                    using (var binaryReader = new BinaryReader(item.OpenReadStream()))
-                    {
-                          byteFiles.Add(binaryReader.ReadBytes((int)item.Length));
-                    }
-                }
-            }
-            
-            List<Photo> photos = new();
-            foreach(var file in byteFiles)
-            {
-                photos.Add(new Photo(file));
-            }
-            person.Photos = photos;
- 
             if (uploadedPhotos.Count > 6 || uploadedPhotos.FirstOrDefault(x => x.Length > 5145728) is not null)
             {
                 ViewBag.IsFileValid = "You cannot upload more than 6 photos / The size of each photo should not exceed 5mb";
@@ -70,12 +41,12 @@ namespace MYL.Controllers
             }
             if (ModelState.IsValid && uploadedPhotos.Count <= 6)
             {
+                person.Photos = _userService.EditUserPhoto(person, uploadedPhotos);
                 _context.People.Add(person);
                 _context.SaveChanges();
                 return Redirect("../MyQuestionary/MyQuestionary");
             }
 
-          
             return View(person);
         }
     }
