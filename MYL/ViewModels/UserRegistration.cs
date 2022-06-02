@@ -10,17 +10,18 @@ namespace MYL.ViewModels
     public class UserRegistration
     {
 
-        [Required(ErrorMessage = "Пожалуйста, укажите адрес электронной почты")]
-        [EmailAddress(ErrorMessage = "Некорректный адрес")]
+        [Required(ErrorMessage = "Please, enter your email")]
+        [EmailAddress(ErrorMessage = "Incorrect email")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Пожалуйста, укажите имя пользователя ")]
-        [RegularExpression(@"[A-Za-z0-9]+", ErrorMessage = "Некорректный логин")]
+        [Required(ErrorMessage = "Please, enter your username ")]
+        [RegularExpression(@"[A-Za-z0-9]+", ErrorMessage = "Incorrect username")]
 
         public string Username { get; set; }
-        [Required(ErrorMessage = "Пожалуйста, укажите пароль")]
-        [RegularExpression(@"[A-Za-z0-9]+", ErrorMessage = "Некорректный пароль")]
+        [Required(ErrorMessage = "Please, enter your password")]
+        [RegularExpression(@"[A-Za-z0-9]+", ErrorMessage = "Incorrect password")]
         public string Password { get; set; }
-        [Compare("Password", ErrorMessage = "Пароли не совпадают")]
+        [Required(ErrorMessage = "Please, confirm your password")]
+        [Compare("Password", ErrorMessage = "Incorrect confirm password")]
         public string PasswordConfirm { get; set; }
         public User GetUserModel()
         {

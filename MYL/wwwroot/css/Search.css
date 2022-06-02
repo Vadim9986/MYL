@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 
 
-html,
-body {
-    height: 100%;
-    font-family: 'Virbur', cursive;
-    font-weight: 500;
-}
+
 
 .background__image {
     width: 100vw;
@@ -27,20 +22,18 @@ body {
 
 }
 
-
-
-nav {
-    margin-right: 60px;
+a {
+    color:black;
 }
 
+
+
 .welcome_block {
-    font-family: 'Playfair Display';
+    font-family: 'Virbur', cursive;
     font-size: 34px;
     font-weight: 600;
     text-align: center;
     margin-top: 150px;
-
-
 }
 
 .search_block {
@@ -59,6 +52,7 @@ nav {
 
 select,
 button {
+    font-family: 'Virbur', cursive;
     height: 40px;
     width: auto;
     background: #9a12b3;
@@ -100,7 +94,7 @@ button {
 }
 
 .text_1 {
-    font-family: 'Playfair Display';
+    font-family: 'Virbur', cursive;
     height: 40px;
     width: 100px;
     background: #9a12b3;
@@ -111,7 +105,7 @@ button {
 }
 
 .text_2 {
-    font-family: 'Playfair Display';
+    font-family: 'Virbur', cursive;
     height: 40px;
     width: 100px;
     background: #f3218a;
@@ -126,6 +120,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .user_block {
@@ -163,6 +158,6 @@ button {
 .user_info {
     text-align: center;
     font-size: 24px;
-    font-family: 'Playfair Display';
+    font-family: 'Virbur', cursive;
     margin-top: 40px;
 }

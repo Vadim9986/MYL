@@ -11,96 +11,114 @@
     <img src="~/img/background-g58d1214df_1920.jpg">
 </div>
 <div class="welcome_block">
-    <h1>Редактирование профиля</h1>
+    <h1>Edit profile</h1>
 </div>
 <div class="myedit">
-    <div class="myedit_content">
-        <div class="photo_edit">
-            <div class="photo">
-                @if (Model.Avatar is not null)
-                {
-                    <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Avatar))" />
+    <form asp-action="EditUser" asp-controller="Edit" method="post" enctype="multipart/form-data">
+        <div class="myedit_content">
+            <div class="photo_edit">
+                <div class="photo">
+                    @if (Model.Avatar is not null)
+                    {
+                        <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Avatar))" />
 
-                }
-                @if (Model.Avatar == null && Model.Gen == "Мужской")
-                {
+                    }
+                    @if (Model.Avatar == null && Model.Gen == "Мужской")
+                    {
 
-                    <img src="~/img/мужской.png" />
-                }
-                @if (Model.Avatar == null && Model.Gen == "Женский")
-                {
-                    <img src="~/img/женский.png" />
-                }
+                        <img src="~/img/мужской.png" />
+                    }
+                    @if (Model.Avatar == null && Model.Gen == "Женский")
+                    {
+                        <img src="~/img/женский.png" />
+                    }
+                </div>
+                <div class="file-input">
+                    <input type="file" name="uploadedFile" id="filePhotos" class="file" accept=".jpg, .jpeg, .png, .webp">
+                    <label for="filePhotos" class="file-name">
+                        Change avatar
+                    </label>
+                </div>
+            </div>
+            <div class="Name">
+                Name:
+                <input type="text" asp-for="Name">
+                <span asp-validation-for="Name"> </span>
+            </div>
+            <div class="Surname">
+                Surname:
+                <input type="text" asp-for="Surname">
+                <span asp-validation-for="Surname"> </span>
+            </div>
+            <div class="Gen">
+                Gender:
+                <select asp-for="Gen" name="Gen">
+                    <option value="Male" selected>Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <span asp-validation-for="Gen"></span>
+            </div>
+            <div class="Phone">
+                Phone:
+                <input type="text" asp-for="Phone">
+                <span asp-validation-for="Phone"> </span>
+            </div>
+            <div class="Age">
+                Age:
+                <input type="text" asp-for="Age">
+                <span asp-validation-for="Age"> </span>
+            </div>
+            <div class="Country">
+                Country:
+                <input type="text" asp-for="Country">
+                <span asp-validation-for="Country"> </span>
+            </div>
+            <div class="Region">
+                Region:
+                <input type="text" asp-for="Region">
+                <span asp-validation-for="Region"> </span>
+            </div>
+            <div class="City">
+                City:
+                <input type="text" asp-for="City">
+                <span asp-validation-for="City"> </span>
+            </div>
+            <div class="Instagram">
+                <span class="display__text">Instagram:</span>
+                <input type="text" asp-for="Instagram" name="Instagram" placeholder="Instagram" autocomplete="off">
+            </div>
+            <div class="Telegram">
+                <span class="display__text">Telegram: </span>
+                <input type="text" asp-for="Telegram" name="Telegram" placeholder="Telegram" autocomplete="off">
+            </div>
+            <div class="Facebook">
+                <span class="display__text">Facebook</span>
+                <input type="text" asp-for="Facebook" name="Facebook" placeholder="Facebook" autocomplete="off">
+            </div>
+            <div class="EmailContact">
+                <span class="display__text"> Contact Email</span>
+                <input type="text" asp-for="EmailContact" name="EmailContact" placeholder="EmailContact" autocomplete="off">
+            </div>
+            <div class="About">
+                About yourself:
+                <textarea asp-for="AboutYourself" name="AboutYourself"></textarea>
+                <span asp-validation-for="Name"> </span>
             </div>
             <div class="file-input">
-                <input type="file" name="avatar" id="filePhotos" class="file" accept=".jpg, .jpeg, .png, .webp">
+                <input type="file" name="uploadedPhotos" multiple="true" id="filePhotos" class="file" accept=".jpg, .jpeg, .png, .webp">
                 <label for="filePhotos" class="file-name">
-                    Изменить аватар
+                    Change photos
                 </label>
             </div>
+            <div class="button_block">
+                <button type="submit" class="button">
+                    <span class="button_line button_line--top"></span>
+                    <span class="button_line button_line--right"></span>
+                    <span class="button_line button_line--bottom"></span>
+                    <span class="button_line button_line--left"></span>
+                    <p>Save changes</p>
+                </button>
+            </div>
         </div>
-        <div class="Name">
-            Имя:
-            <input type="text" asp-for="Name">
-            <span asp-validation-for="Name"> </span>
-        </div>
-        <div class="Surname">
-            Фамилия:
-            <input type="text" asp-for="Surname">
-            <span asp-validation-for="Surname"> </span>
-        </div>
-        <div class="Gen">
-            Пол:
-            <select asp-for="Gen" name="Gen">
-                <option value="Мужской" selected>Мужской</option>
-                <option value="Женский">Женский</option>
-            </select>
-            <span asp-validation-for="Gen"></span>
-        </div>
-        <div class="Phone">
-            Телефон:
-            <input type="text" asp-for="Phone">
-            <span asp-validation-for="Phone"> </span>
-        </div>
-        <div class="Age">
-            Возраст:
-            <input type="text" asp-for="Age">
-            <span asp-validation-for="Age"> </span>
-        </div>
-        <div class="Country">
-            Страна:
-            <input type="text" asp-for="Country">
-            <span asp-validation-for="Country"> </span>
-        </div>
-        <div class="Region">
-            Область:
-            <input type="text" asp-for="Region">
-            <span asp-validation-for="Region"> </span>
-        </div>
-        <div class="City">
-            Город:
-            <input type="text" asp-for="City">
-            <span asp-validation-for="City"> </span>
-        </div>
-        <div class="About">
-            О себе:
-            <textarea asp-for="AboutYourself" name="AboutYourself"></textarea>
-            <span asp-validation-for="Name"> </span>
-        </div>
-        <div class="file-input">
-            <input type="file" name="uploadedPhotos" multiple="true" id="filePhotos" class="file" accept=".jpg, .jpeg, .png, .webp">
-            <label for="filePhotos" class="file-name">
-                Изменить фотографии на сайте
-            </label>
-        </div>
-        <div class="button_block">
-            <a href="#" class="button">
-                <span class="button_line button_line--top"></span>
-                <span class="button_line button_line--right"></span>
-                <span class="button_line button_line--bottom"></span>
-                <span class="button_line button_line--left"></span>
-                <p>Сохранить</p>
-            </a>
-        </div>
-    </div>
+    </form>
 </div>

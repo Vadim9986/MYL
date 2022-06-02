@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Abril+Fatface|Alegreya|Arima+Madurai|Dancing+Script|Dosis|Merriweather|Oleo+Script|Overlock|PT+Serif|Pacifico|Playball|Playfair+Display|Share|Unica+One|Vibur');
 body {
     height: 100%;
-    font-family: 'Vibur', cursive;
-    font-weight: 500;
+    font-family:  cursive;
+   
 }
 .preloader {
     position: fixed;
@@ -104,20 +105,23 @@ header::before {
 
 .header_link {
     color: #ffffff;
-    text-transform: uppercase;
-    font-size: 18px;
-    text-decoration: none;
-    margin-left: 40px;
+    font-weight: 600;
+    font-size: 24px;
+    margin-left: 60px;
+    font-family: cursive;
 }
 .login {
+    font-family:  cursive;
     color: #fff;
     border-radius: 2px 0 0 2px;
     padding: 10px;
     display: inline-block;
     background-color: #f3218a;
+    border-radius:10px;
 }
 
 .signup {
+    font-family: cursive;
     color: #fff;
     border-radius: 2px 0 0 2px;
     padding: 10px;

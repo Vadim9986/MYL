@@ -22,7 +22,7 @@
             <div class="file-input">
                 <input type="file" name="avatar" id="file" class="file" accept=".jpg, .jpeg, .png, .webp">
                 <label for="file" class="file-name">
-                   Сhoose your avatar
+                    Сhoose your avatar
                 </label>
             </div>
             <div class="string_name">
@@ -45,7 +45,7 @@
             </div>
             <div class="string_name">
                 <span class="display__text">Enter your age</span>
-                <input type="text"  asp-for="Age" name="Age" placeholder="Age" autocomplete="off" required>
+                <input type="text" asp-for="Age" name="Age" placeholder="Age" autocomplete="off" required>
                 <span class="validation" asp-validation-for="Age"></span>
             </div>
             <div class="string_name">
@@ -69,26 +69,46 @@
                 <span class="validation" asp-validation-for="City"></span>
             </div>
             <div class="string_name">
+                <span class="display__text">Enter your Instagram</span>
+                <input type="text" asp-for="Instagram" name="Instagram" placeholder="Instagram" autocomplete="off">
+                <span class="validation"  </span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Enter your Telegram</span>
+                <input type="text" asp-for="Telegram" name="Telegram" placeholder="Telegram" autocomplete="off">
+                <span class="validation"  </span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Enter your Facebook</span>
+                <input type="text" asp-for="Facebook" name="Facebook" placeholder="Facebook" autocomplete="off">
+                <span class="validation"  </span>
+            </div>
+            <div class="string_name">
+                <span class="display__text">Enter your contact Email</span>
+                <input type="text" asp-for="EmailContact" name="EmailContact" placeholder="EmailContact" autocomplete="off">
+                <span class="validation"  </span>
+            </div>
+            <div class="string_name">
                 <span class="display__text">Write something about yourself</span>
                 <textarea asp-for="AboutYourself" name="AboutYourself" placeholder="..." autocomplete="off"></textarea>
                 <span class="validation" asp-validation-for="AboutYourself"> </span>
             </div>
-                <span class="display__text">@photos</span>
-                <div class="file-input">
-                    <input type="file" name="uploadedPhotos" multiple="true" id="filePhotos" class="file" accept=".jpg, .jpeg, .png, .webp">
-                    <label for="filePhotos" class="file-name">
-                        Choose photos
-                    </label>
-                </div>
-
-                <button class="button" type="submit">
-                    <span class="button_line button_line--top"></span>
-                    <span class="button_line button_line--right"></span>
-                    <span class="button_line button_line--bottom"></span>
-                    <span class="button_line button_line--left"></span>
-                    <p>Create form</p>
-                </button>
+            <span class="display__text">@photos</span>
+            <div class="file-input">
+                <input type="file" name="uploadedPhotos" multiple="true" id="filePhotos" class="file" accept=".jpg, .jpeg, .png, .webp">
+                <label for="filePhotos" class="file-name">
+                    Choose photos
+                </label>
             </div>
+
+            <button class="button" type="submit">
+                <span class="button_line button_line--top"></span>
+                <span class="button_line button_line--right"></span>
+                <span class="button_line button_line--bottom"></span>
+                <span class="button_line button_line--left"></span>
+                <p>Create form</p>
+            </button>
+        </div>
         </div>
 
 </form>

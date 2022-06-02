@@ -4,8 +4,8 @@
 html,
 body {
     height: 100%;
-    font-family: 'Vibur', cursive;
-    font-weight: 500;
+    font-family:  cursive;
+
 }
 
 .background__image {
@@ -39,9 +39,9 @@ body {
 
 h1 {
     text-align: center;
-    font-family: 'Playfair Display';
+    font-family: 'Virbur', cursive;
+    font-size: 34px;
     font-weight: 600;
-    font-size: 30px;
     padding-top: 40px;
 }
 
@@ -94,8 +94,8 @@ h1 {
 }
 
 .text1 {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 
@@ -108,15 +108,27 @@ h1 {
 .Country,
 .Region,
 .City,
-.About {
+.About,
+.Instagram,
+.Telegram,
+.ContactEmail,
+.Facebook {
     margin-top: 10px;
     font-size: 20px;
-
+    font-weight: 600;
+}
+.text_about {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 20px;
+    text-align: justify;
+    letter-spacing: 1px;
 }
 
 .block_row {
 
-    margin: 50px -10px 20px 0px;
+    margin: 40px -10px 20px 0px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -134,7 +146,7 @@ h1 {
     padding-top: 56%;
     border-radius: 20%;
     overflow: hidden;
-    cursor: pointer;
+    cursor: zoom-in;
 }
 
 .block_item img {
@@ -167,7 +179,7 @@ h1 {
     position: relative;
     display: inline-block;
     padding: 15px 30px;
-    font-family: 'Playfair Display';
+    font-family: 'Virbur', cursive;
     font-weight: 600;
     color: black;
     text-decoration: none;
@@ -176,12 +188,12 @@ h1 {
     overflow: hidden;
     transition: 0.2s;
     text-align: center;
-    width: 300px;
+    width: auto;
     top: 50%;
     left: 36.3%;
-
-
-
+}
+#fav {
+    left: 43%;
 }
 
 .button_line {
@@ -254,5 +266,13 @@ h1 {
 
 .button_block {
     width: 100%;
+    margin-top: 40px;
 
+}
+h2 {
+    margin-top: 80px;
+    text-align: center;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: 600;
 }

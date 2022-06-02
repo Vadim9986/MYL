@@ -21,19 +21,39 @@
                     <i class="fa-solid fa-user"></i>
                     <input type="text" asp-for="Username" placeholder="User name">
                 </div>
+                <span asp-validation-for="Username"></span>
                 <div class="Password">
                     <i class="fa-solid fa-key"></i>
-                    <input type="password" asp-for="Password"  name="password" placeholder="Password" id="pwd">
+                    <input type="password" asp-for="Password" name="password" placeholder="Password" id="pwd">
                     <i class="fa-solid fa-eye"></i>
                 </div>
-                <button class="login_acc" type="submit" name="name" value="ВОЙТИ">LOG IN</button>      
+                <span asp-validation-for="Password"></span>
+                <div class="button_login">
+                    <button class="login_acc" type="submit" name="name" value="ВОЙТИ">Log in</button>
+                </div>
+                    <div class="button_pasfog">
+                        <button class="pas_forgot">Forgot Password</button>
+                    </div>
             </div>
-            <div class="other">
-                <a asp-action="Regist" asp-controller="Regist" class="sign-up">
-                  Sign Up 
-                </a>
-                    <button class="pas_forgot">Forgot Password</button>
-</div>
+         
+            <div class="g-recaptcha" data-sitekey="6Lf9jjcgAAAAAN1gZoZH_TI50BvtCKMHUvoXf05D" data-callback="verifyCaptcha"></div>
+            <div id="g-recaptcha-error"></div>
+            <script src='https://www.google.com/recaptcha/api.js'></script>
+            <script>
+                var recaptcha_response = '';
+                function submitUserForm() {
+                    if (recaptcha_response.length == 0) {
+                        document.getElementById('g-recaptcha-error').innerHTML = '<span class="text1 field-validation-error">Это обязательное поле</span>';
+                        return false;
+                    }
+                    return true;
+                }
+
+                function verifyCaptcha(token) {
+                    recaptcha_response = token;
+                    document.getElementById('g-recaptcha-error').innerHTML = '';
+                }
+            </script>
         </div>
     </form>
 </div>

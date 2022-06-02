@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
     searchLove();
-    console.log(9);
 });
 
 function searchLove() {

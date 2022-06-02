@@ -1,8 +1,10 @@
 ﻿@using MYL.Models;
 @model IEnumerable<Questionary>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @foreach (var u in Model)
 {
+<a asp-action="MyQuestionary" asp-controller="MyQuestionary" asp-route-id="@u.User.Id">
     @if (u.Avatar is not null)
     {
         <div class="user_block">
@@ -50,4 +52,6 @@
         </div>
 
     }
-}
+</a>
+    }
+

@@ -7,108 +7,167 @@
 @model MYL.Models.Questionary
 <link href="~/css/nulstyle.css" rel="stylesheet" />
 <link href="~/css/MyQuest.css" rel="stylesheet" />
-    <div class="background__image">
-        <img src="~/img/background-g58d1214df_1920.jpg">
-    </div>
+<div class="background__image">
+    <img src="~/img/background-g58d1214df_1920.jpg">
+</div>
+@if (ViewBag.Account == Model.User.Username)
+{
     <div class="welcome_block">
-        <h1>Личный кабинет</h1>
+        <h1>My Profile</h1>
     </div>
-    <div class="myquest">
-        <div class="myquest__content">
-            <div class="myquest_leftblock">
-                <div class="Avatar">
-                    <div class="myphoto">
-                        @if (Model.Avatar is not null)
-                        {
-                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Avatar))" />
+}
+else
+{
+    <div class="welcome_block">
+        <h1>Profile</h1>
+    </div>
 
-                        }
-                        @if (Model.Avatar == null && Model.Gen == "Male")
-                        {
+}
 
-                            <img src="~/img/Man new.png" />
-                        }
-                        @if (Model.Avatar == null && Model.Gen == "Female")
-                        {
-                            <img src="~/img/Women new.png" />
-                        }
+<div class="myquest">
+    <div class="myquest__content">
+        <div class="myquest_leftblock">
+            <div class="Avatar">
+                <div class="myphoto">
+                    @if (Model.Avatar is not null)
+                    {
+                        <img src="data:image/jpeg;base64,@(Convert.ToBase64String(Model.Avatar))" />
 
-                    </div>
-                </div>
-            </div>
-            <div class="myquest_rightblock">
-                <div class="Name">
-                    Имя:
-                    <span class="text1">  @Model.Name</span>
-                </div>
-                <div class="Surname">
-                    Фамилия:
-                    <span class="text1">  @Model.Surname</span>
-                </div>
-                <div class="Gen">
-                    Пол:
-                    <span class="text1">     @Model.Gen</span>
-                </div>
-                <div class="Phone">
-                    Телефон:
-                    <span class="text1">  @Model.Phone</span>
-                </div>
-            </div>
-            <div class="myquest_rightblock_2">
-                <div class="Age">
-                    Возраст:
-                    <span class="text1">  @Model.Age</span>
-                </div>
-                <div class="Country">
-                    Страна:
-                    <span class="text1"> @Model.Country </span>
-                </div>
-                <div class="Region">
-                    Область:
-                    <span class="text1">@Model.Region</span>
-                </div>
-                <div class="City">
-                    Город:
-                    <span class="text1"> @Model.City</span>
-                </div>
-            </div>
-            <div class="myquest_rightblock_3">
-                <div class="About">
-                    О себе:
-                    <span class="text1">
-                        @Model.AboutYourself
-                    </span>
+                    }
+                    @if (Model.Avatar == null && Model.Gen == "Male")
+                    {
+
+                        <img src="~/img/Man new.png" />
+                    }
+                    @if (Model.Avatar == null && Model.Gen == "Female")
+                    {
+                        <img src="~/img/Women new.png" />
+                    }
+
                 </div>
             </div>
         </div>
+        <div class="myquest_rightblock">
+            <div class="Name">
+                Name:
+                <span class="text1">  @Model.Name</span>
+            </div>
+            <div class="Surname">
+                Surname:
+                <span class="text1">  @Model.Surname</span>
+            </div>
+            <div class="Gen">
+                Gender:
+                <span class="text1">     @Model.Gen</span>
+            </div>
+            <div class="Phone">
+                Phone:
+                <span class="text1">  @Model.Phone</span>
+            </div>
+        </div>
+        <div class="myquest_rightblock_2">
+            <div class="Age">
+                Age:
+                <span class="text1">  @Model.Age</span>
+            </div>
+            <div class="Country">
+                Country:
+                <span class="text1"> @Model.Country </span>
+            </div>
+            <div class="Region">
+                Region:
+                <span class="text1">@Model.Region</span>
+            </div>
+            <div class="City">
+                City:
+                <span class="text1"> @Model.City</span>
+            </div>
+        </div>
+        <div class="myquest_rightblock_3">
+            <div class="Instagram">
+                <i class="fa-brands fa-instagram"></i> Instagram:
+                <span class="text1">@Model.Instagram </span>
+            </div>
+            <div class="Telegram">
+                <i class="fa-brands fa-telegram"></i> Telegram:
+                <span class="text1">@Model.Telegram </span>
+            </div>
+            <div class="Facebook">
+                <i class="fa-brands fa-facebook"></i> Facebook:
+                <span class="text1">@Model.Facebook </span>
+            </div>
+            <div class="ContactEmail">
+                <i class="fa-solid fa-at"></i>
+                Email:
+                <span class="text1">@Model.EmailContact </span>
+            </div>
+        </div>
+    </div>
+    <div class="myquest_rightblock_4">
+        <div class="About">
+            About yourself:
+            <br />
+            <span class="text_about">
+                @Model.AboutYourself
+            </span>
+        </div>
+    </div>
+    @if (ViewBag.Account == Model.User.Username)
+    {
         <div class="button_block">
-            <a asp-action="Edit" asp-controller="Edit" class="button" >
+            <a asp-action="Edit" asp-controller="Edit" class="button" id="fav">
                 <span class="button_line button_line--top"></span>
                 <span class="button_line button_line--right"></span>
                 <span class="button_line button_line--bottom"></span>
                 <span class="button_line button_line--left"></span>
-                Редактировать
+                Edit
+                <i class="fa-solid fa-pen-to-square"></i>
             </a>
         </div>
-        <div class="Photos_name">
-            <span class="text1" id="text_image">Мои фотографии</span>
+    }
+    else
+    {
+        <div class="button_block">
+            <a class="button">
+                <span class="button_line button_line--top"></span>
+                <span class="button_line button_line--right"></span>
+                <span class="button_line button_line--bottom"></span>
+                <span class="button_line button_line--left"></span>
+                Add to favorite
+                <i class="fa-solid fa-heart"></i>
+            </a>
         </div>
-        <div class=" Photos">
-            <div class="block_row">
-                @if (Model.Photos != null)
-                {
+    }
+    @if (ViewBag.Account == Model.User.Username)
+    {
+        <div class="Photos_name">
+            <h2 id="text_image">My photos</h2>
+        </div>
+    }
+    else
+    {
+        <div class="Photos_name">
+            <h2 id="text_image"> Photos</h2>
+        </div>
 
-                    @foreach (var item in Model.Photos)
-                    {
-                        <div class="block_column">
-                            <div class="block_item" id="fives_image">
-                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))"/>
-                            </div>
+    }
+
+    <div class=" Photos">
+        <div class="block_row">
+            @if (Model.Photos != null)
+            {
+
+                @foreach (var item in Model.Photos)
+                {
+                    <div class="block_column">
+                        <div class="block_item" id="fives_image">
+                            <img src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))" />
                         </div>
-                        
-                    }
+                    </div>
+
                 }
-            </div>
+            }
         </div>
     </div>
-    <script src="~/js/MyQuest.js"></script>
+</div>
+<script src="~/js/MyQuest.js"></script>

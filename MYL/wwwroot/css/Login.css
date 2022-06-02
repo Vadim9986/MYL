@@ -52,12 +52,11 @@ form {
 }
 
 /* Login title form form */
-.head-form h1 {
-    font-size: 250%;
-    font-family: 'Playfair Display', serif;
-    color: black;
-
-}
+    .head-form h1 {
+        font-family: 'Virbur', cursive;
+        font-size: 34px;
+        font-weight: 600;
+    }
 .Password{
     position:relative;
 }
@@ -74,7 +73,7 @@ input[type="password"] {
     height: 50px;
     padding: 15px 35px 15px 15px;
     font-size: 16px;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Virbur', cursive;
     color: black;
     outline: none;
     border: 1px solid;
@@ -86,6 +85,9 @@ input[type="password"] {
 }
 
 .inputs {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     margin-top: 50px;
 }
 
@@ -114,26 +116,24 @@ i.fa-solid.fa-eye::before{
 }
 
 /*Soderjanie formi*/
-.other {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-between;
+
+.button_pasfog
+{
+    margin-top: 20px;
+    width: 500px;
+
 }
-.sign-up,
 .pas_forgot {
-    width: 150px;
     background: #f3218a;
     color: white;
 }
-.sign-up,
+
 .pas_forgot,
 .login_acc {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    font-family: 'Playfair Display', sans-serif;
-    
+    font-family: 'Virbur', cursive;
     border: 1px solid;
     border-color: black;
     margin: 0 auto;
@@ -144,10 +144,14 @@ i.fa-solid.fa-eye::before{
     border-radius: 5px;
     padding: 0 20px;
     letter-spacing: 0.05em;
+    width: 500px;
+    padding: 15px 35px 15px 15px;
 }
 .login_acc {
-    width: 430px;
+    
     background: #B8F2E6;
+    margin-top: 20px;
+   
 }
         .login_acc:hover {
             transform: translatey(3px);
@@ -176,4 +180,9 @@ i.fa-solid.fa-eye::before{
     100% {
         transform: translateY(5px);
     }
+}
+.g-recaptcha{
+    display:flex;
+    justify-content:center;
+    margin-top: 20px;
 }

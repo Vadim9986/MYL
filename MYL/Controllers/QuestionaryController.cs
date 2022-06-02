@@ -65,7 +65,7 @@ namespace MYL.Controllers
  
             if (uploadedPhotos.Count > 6 || uploadedPhotos.FirstOrDefault(x => x.Length > 5145728) is not null)
             {
-                ViewBag.IsFileValid = "Вы не можете загрузить больше 6 фотографий/ Размер каждой фотографии не должен привышать 5мб";
+                ViewBag.IsFileValid = "You cannot upload more than 6 photos / The size of each photo should not exceed 5mb";
                 ModelState.AddModelError("Photos", "Не верно");
             }
             if (ModelState.IsValid && uploadedPhotos.Count <= 6)

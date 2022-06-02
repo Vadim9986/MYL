@@ -29,12 +29,12 @@ namespace MYL.Controllers
             var personLogin = db.Users.ToList().FirstOrDefault(x => x.Username == user.Username); 
             if(personLogin is not null)
             {
-                ModelState.AddModelError("Username", "Аккаунт с таким логином, уже зарегистрирован");
+                ModelState.AddModelError("Username", "An account with this username is already registered");
             }
             var personEmail = db.Users.ToList().FirstOrDefault(x => x.Email == user.Email);
             if (personEmail is not null)
             {
-                ModelState.AddModelError("Email", "Аккаунт с таким Email , уже зарегистрирован");
+                ModelState.AddModelError("Email", "An account with this email is already registered");
             }
             if (ModelState.IsValid)
             {

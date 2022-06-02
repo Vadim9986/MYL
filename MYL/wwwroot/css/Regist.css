@@ -6,12 +6,8 @@
 /*Background vsego sayta*/
 
 
-body {
-    font-family: 'Vibur', cursive;
-    opacity: .95;
-}
 .preloader {
-    position: absolute;
+    position: fixed ;
     top: 0;
     left: 0;
     width: 100%;
@@ -88,16 +84,16 @@ form {
 
 /* Login title form form */
     .head-form h1 {
-        font-size: 250%;
-        font-family: 'Playfair Display', serif;
-        color: #black;
+        font-family: 'Virbur', cursive;
+        font-size: 34px;
+        font-weight: 600;
     }
 
 /*  A welcome message or an explanation of the login form */
     .head-form p {
         letter-spacing: 0.10em;
-        font-family: 'Playfair Display', serif;
-        color: #black;
+        font-family: 'Virbur', cursive;
+        margin-top: 10px;
     }
 
 input[type="text"] {
@@ -114,7 +110,7 @@ input[type="text"] {
     height: 50px;
     padding: 15px;
     font-size: 16px;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Virbur', cursive;
     color: black;
     outline: none;
     border: 1px solid;
@@ -123,11 +119,37 @@ input[type="text"] {
     border-color: black;
     margin: 15px auto;
     display: block;
-    
+}
+input[type="password"] {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#d37272+1,5d7ecc+100&0.4+0,0.4+100 */
+    background: -moz-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, rgba(211, 114, 114, 0.6) 0%, rgba(211, 114, 114, 0.6) 1%, rgba(93, 126, 204, 0.6) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#66d37272', endColorstr='#665d7ecc', GradientType=1);
+    /* IE6-9 fallback on horizontal gradient */
+    width: 500px;
+    height: 50px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Virbur', cursive;
+    color: black;
+    outline: none;
+    border: 1px solid;
+    border-radius: 5px 5px 5px 5px;
+    transition: 0.2s linear;
+    border-color: black;
+    margin: 15px auto;
+    display: block;
 }
 
-.inputs {
-    margin-top: 50px;
+    .inputs {
+        margin-top: 50px;
+    }
+input[type="password"]::placeholder {
+    color: #474242;
 }
 
 input[type="text"]::placeholder {
@@ -136,6 +158,20 @@ input[type="text"]::placeholder {
 i.fa-solid.fa-at::before {
     display: block;
 }
+i.fa-solid.fa-eye.pas-c::before {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 34%;
+    bottom: 24%;
+}
+i.fa-solid.fa-eye.pas::before {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    right: 34%;
+    bottom: 39.5%;
+}
 
 .Email,
 .UserName,
@@ -143,6 +179,12 @@ i.fa-solid.fa-at::before {
 .PasswordConfirm {
     display: flex;
     align-items: center;
+
+}
+.valid_view {
+    font-family:  cursive;
+    margin-left: 30px;
+   
 }
 
 /*Soderjanie formi*/
@@ -150,11 +192,11 @@ i.fa-solid.fa-at::before {
 .sign-up {
     display: block;
     background: #B8F2E6;
-    font-family: 'Playfair Display', sans-serif;
+    font-family: 'Virbur', cursive;
     color: #252537;
     border: 1px solid;
     border-color: black;
-    margin: 0 auto;
+    margin: 10px auto;
     width: 280px;
     height: 50px;
     cursor: pointer;

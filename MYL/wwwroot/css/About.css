@@ -43,7 +43,9 @@ body {
 .begin {
     position: relative;
 }
-
+.content {
+   padding: 50px;
+}
 .container {
     max-width: 1180px;
     margin: 0px auto;
@@ -67,7 +69,7 @@ body {
 }
 
 .container__flex__item:nth-child(2) {
-    margin-top: 80px;
+    margin-top: 10px;
 }
 
 .container__flex__item__block {
@@ -85,19 +87,18 @@ body {
 
 .text1 {
     color: black;
-    font-family: 'Playfair Display';
+    font-family: 'Virbur', cursive;
     font-size: 30px;
-    letter-spacing: 4px;
-    font-weight: 800;
+    letter-spacing: 2px;
+    font-weight: 600;
     text-align: center;
 }
 
 .text2 {
     display: block;
-    font-family: 'Playfair Display';
-    font-size: 30px;
-    letter-spacing: 4px;
-    font-weight: 800;
+    font-family: 'Virbur', cursive;
+    font-size: 34px;
+    font-weight: 600;
     text-align: center;
     color: black;
 }

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using MYL.Models;
 using MYL.DataBase;
 using MYL.Services;
+using MYL.Interfaces;
 
 namespace MYL
 {
@@ -30,6 +31,8 @@ namespace MYL
             services.AddControllersWithViews();
             services.AddSession();
             services.AddTransient<Service>();
+            services.AddScoped<IFileService, FileServices>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

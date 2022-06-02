@@ -4,7 +4,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Vibur', cursive;
+    font-family: cursive;
     font-weight: 500;
 }
 
@@ -107,13 +107,12 @@ body {
     display: inline-block;
     padding: 15px 30px;
     color: #f3218a;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 24px;
+    font-size: 28px;
+    
     letter-spacing: 4px;
     overflow: hidden;
     transition: 0.2s;
-    margin-left: 37%;
+    margin-left: 35%;
 }
 
 .button_line {

@@ -17,12 +17,22 @@ namespace MYL.Controllers
         {
             _context = context;
         }
-        public IActionResult MyQuestionary()
+        public IActionResult MyQuestionary(int Id)
         {
-            var userName= ControllerContext.HttpContext.Session.GetString("Name");
-            var user = _context.People.Include(x=>x.User).Include(x=>x.Photos).FirstOrDefault(x => x.User.Username == userName);
+            var userName = ControllerContext.HttpContext.Session.GetString("Name");
             ViewBag.Account = userName;
-            return View(user);
+            if (Id == 0)
+            {
+               
+                var user = _context.People.Include(x => x.User).Include(x => x.Photos).FirstOrDefault(x => x.User.Username == userName);
+                return View(user);
+            }
+            else
+            {
+                var user = _context.People.Include(x => x.User).Include(x=>x.Photos).FirstOrDefault(x => x.Id == Id);
+                return View(user);
+            }
         }
+
     }
 }

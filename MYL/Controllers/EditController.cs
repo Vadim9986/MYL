@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MYL.DataBase;
+using MYL.Interfaces;
+using MYL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,11 +14,13 @@ namespace MYL.Controllers
     public class EditController : Controller
     {
         DataBaseContext _context;
-
-        public EditController(DataBaseContext context)
+        private readonly IUserService _UserService;
+        public EditController(IUserService UserService, DataBaseContext context)
         {
+            _UserService = UserService;
             _context = context;
         }
+
         public IActionResult Edit()
         {
             var userName = ControllerContext.HttpContext.Session.GetString("Name");
@@ -25,5 +29,7 @@ namespace MYL.Controllers
 
             return View(user);
         }
+ 
+        
     }
 }
