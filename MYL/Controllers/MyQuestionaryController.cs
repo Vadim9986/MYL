@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MYL.DataBase;
+using MYL.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,14 @@ namespace MYL.Controllers
     public class MyQuestionaryController : Controller
     {
         DataBaseContext _context;
+        IFavoriteService _favoriteService;
+        IUserService _userService;
 
-        public MyQuestionaryController(DataBaseContext context)
+        public MyQuestionaryController(DataBaseContext context, IFavoriteService favoriteService, IUserService userService)
         {
             _context = context;
+            _favoriteService = favoriteService;
+            _userService = userService;
         }
         public IActionResult MyQuestionary()
         {
@@ -33,5 +38,16 @@ namespace MYL.Controllers
                 return View("../MyQuestionary/MyQuestionary", user);
         }
 
+        public bool AddToFavourite(int id)
+        {
+            var userName = ControllerContext.HttpContext.Session.GetString("Name");
+            if (userName is not null)
+            {
+                _favoriteService.Add(_userService.Get(userName), id);
+                return true;
+            }
+
+            return false;
+        }
     }
 }

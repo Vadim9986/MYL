@@ -9,8 +9,9 @@ namespace MYL.Interfaces
 {
     public interface IFavoriteService
     {
-        public bool Add(string userName, int productId);
-        public void Delete(int favoriteId);
+        public void Add(User user, int questionaryId);
+        public void Delete(Favorite favorite);
         public Favorite Get(int favoriteId);
+        public List<Favorite> Get(string userName);
     }
 }

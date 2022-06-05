@@ -17,11 +17,13 @@ namespace MYL.Controllers
     {
         DataBaseContext _context;
         IUserService _userService;
+        IFileService _fileService;
 
-        public QuestionaryController(DataBaseContext context, IUserService userService)
+        public QuestionaryController(DataBaseContext context, IUserService userService, IFileService fileService)
         {
             _context = context;
             _userService = userService;
+            _fileService = fileService;
         }
         public IActionResult Quest()
         {
@@ -42,6 +44,7 @@ namespace MYL.Controllers
             if (ModelState.IsValid && uploadedPhotos.Count <= 6)
             {
                 person.Photos = _userService.EditUserPhoto(person, uploadedPhotos);
+                person.Avatar = _fileService.FromImageToByte(avatar);
                 _context.People.Add(person);
                 _context.SaveChanges();
                 return Redirect("../MyQuestionary/MyQuestionary");

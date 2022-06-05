@@ -13,26 +13,44 @@ namespace MYL.Services
     public class FavoriteService : IFavoriteService
     {
         private readonly DataBaseContext _db;
-        private readonly IUserService UserService;
-        public bool Add(string userName, int productId)
+        private readonly IUserService _userService;
+        public FavoriteService(DataBaseContext db, IUserService userService)
         {
-            throw new NotImplementedException();
+            _db = db;
+            _userService = userService;
+        }
+        public void Add(User user, int questionaryId)
+        {
+            var userWithFav = Get(user.Username).FirstOrDefault(x => x.Questionary.Id == questionaryId);
+            if (userWithFav is null)
+            {
+                Favorite favorite = new Favorite();
+                favorite.User = user;
+                favorite.Questionary = _db.People.FirstOrDefault(x => x.Id == questionaryId);
+                _db.Favorites.Add(favorite);
+                _db.SaveChanges();
+            }
+            else
+            {
+                var favorite = _db.Favorites.Include(x => x.User).Include(x => x.Questionary).ToList().FirstOrDefault(x => x.User.Username == user.Username && x.Questionary.Id == questionaryId);
+                Delete(favorite);
+            }
         }
 
-        public void Delete(int favoriteId)
+        public void Delete(Favorite favorite)
         {
-            var favorite = Get(favoriteId);
             _db.Favorites.Remove(favorite);
             _db.SaveChanges();
         }
-
-       
 
         public Favorite Get(int favoriteId)
         {
             return _db.Favorites.Include(x => x.User).ToList().FirstOrDefault(x => x.Id == favoriteId);
         }
 
-       
+       public List<Favorite> Get(string userName)
+       {
+            return _db.Favorites.Include(x => x.User).Include(x => x.Questionary).Where(x => x.User.Username == userName).ToList();
+       }
     }
 }
