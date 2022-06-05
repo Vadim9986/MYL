@@ -14,6 +14,7 @@ namespace MYL.DataBase
         public DbSet<Questionary> People { get; set; }
 
         public DbSet<Photo> Photos { get; set; }
+        public DbSet<Favorite> Favorites { get; set; }
 
         public DataBaseContext(DbContextOptions<DataBaseContext> options)
             : base(options)

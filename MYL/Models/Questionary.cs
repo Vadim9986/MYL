@@ -39,6 +39,9 @@ namespace MYL.Models
         [StringLength(1000, MinimumLength = 10, ErrorMessage = "About yourself length must be between 3 and 300 characters")]
         public string AboutYourself { get; set; }
         public List<Photo> Photos { get; set; } = new List<Photo>();
+        public List<Favorite> Favorites { get; set; } = new List<Favorite>();
         public User User { get; set; }
+
+                            
     }
 }

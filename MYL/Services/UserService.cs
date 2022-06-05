@@ -31,7 +31,7 @@ namespace MYL.Services
 
         public User Get(string username)
         {
-            throw new NotImplementedException();
+            return _db.Users.Include(x => x.Favorites).ToList().FirstOrDefault(x => x.Username == username);
         }
 
         public void EditUser(Questionary newUser, string userName, IFormFile uploadedFile, IFormFileCollection uploadedPhotos)
