@@ -31,7 +31,8 @@ namespace MYL.Services
 
         public User Get(string username)
         {
-            return _db.Users.Include(x => x.Favorites).ToList().FirstOrDefault(x => x.Username == username);
+            var test = _db.Users.Include(x => x.Favorites).FirstOrDefault(x => x.Username == username);
+            return test ;
         }
 
         public void EditUser(Questionary newUser, string userName, IFormFile uploadedFile, IFormFileCollection uploadedPhotos)

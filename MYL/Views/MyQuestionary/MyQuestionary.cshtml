@@ -133,14 +133,14 @@ else
     else
     {
         <div class="button_block">
-            <div class="button" onclick="AddToFavourite(@Model.Id)">
+            <a asp-action="AddToFavourite" asp-controller="MyQuestionary" class="button" onclick="AddToFavourite(@Model.Id)">
                 <span class="button_line button_line--top"></span>
                 <span class="button_line button_line--right"></span>
                 <span class="button_line button_line--bottom"></span>
                 <span class="button_line button_line--left"></span>
                 Add to favorite
                 <i class="fa-solid fa-heart"></i>
-            </div>
+            </a>
         </div>
     }
     @if (ViewBag.Account == Model.User.Username)

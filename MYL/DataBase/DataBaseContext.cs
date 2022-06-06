@@ -19,7 +19,7 @@ namespace MYL.DataBase
         public DataBaseContext(DbContextOptions<DataBaseContext> options)
             : base(options)
         {
-            // Database.EnsureDeleted();
+           // Database.EnsureDeleted();
             Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

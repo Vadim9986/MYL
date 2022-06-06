@@ -191,6 +191,7 @@ h1 {
     width: auto;
     top: 50%;
     left: 36.3%;
+    cursor:pointer;
 }
 #fav {
     left: 43%;

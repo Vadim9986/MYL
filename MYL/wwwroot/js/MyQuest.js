@@ -10,7 +10,7 @@ function AddToFavourite(id) {
     formData.append("id", id);
 
     $.ajax({
-        url: "/MyQuestionary/AddToFavourite",
+        url: "../MyQuestionary/AddToFavourite",
         type: 'POST',
         cache: false,
         contentType: false,

@@ -1,0 +1,87 @@
+﻿@using MYL.Models
+@model IEnumerable<Questionary>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Favorite";
+    Layout = "_Layout";
+}
+<link href="~/css/nulstyle.css" rel="stylesheet" />
+<link href="~/css/Favorite.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <div class="background__image"><img src="~/img/background-g58d1214df_1920.jpg">
+    </div>
+    <div class="main_content">
+        <div class="welcome_block">
+            <h1>Favorites</h1>
+        </div>
+        <div class="row">
+            @foreach (var u in Model)
+{
+<a asp-action="UserQuestionary" asp-controller="MyQuestionary" asp-route-id="@u.User.Id">
+    @if (u.Avatar is not null)
+    {
+        <div class="user_block">
+            <div class="photo_block">
+                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(u.Avatar))">
+            </div>
+            <div class="user_info">
+                @u.Name
+                <br />
+                @u.Surname
+                <br />
+                @u.Age
+            </div>
+             <div class="button_delete">
+                    <button type="submit">
+                        Delete
+                    </button>
+                </div>
+        </div>
+    }
+    @if (u.Avatar == null && u.Gen == "Male")
+    {
+        <div class="user_block">
+            <div class="photo_block">
+                <img src="~/img/Man new.png">
+            </div>
+            <div class="user_info">
+                @u.Name
+                <br />
+                @u.Surname
+                <br />
+                @u.Age
+            </div>
+             <div class="button_delete">
+                    <button type="submit">
+                        Delete
+                    </button>
+                </div>
+        </div>
+
+    }
+    @if (u.Avatar == null && u.Gen == "Female")
+    {
+        <div class="user_block">
+            <div class="photo_block">
+                <img src="~/img/Women new.png">
+            </div>
+            <div class="user_info">
+                @u.Name
+                <br />
+                @u.Surname
+                <br />
+                @u.Age
+            </div>
+             <div class="button_delete">
+                    <button type="submit">
+                        Delete
+                    </button>
+                </div>
+        </div>
+
+    }
+</a>
+    }
+            </div>
+        </div>
+    
