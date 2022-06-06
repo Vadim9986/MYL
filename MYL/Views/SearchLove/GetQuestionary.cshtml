@@ -2,9 +2,9 @@
 @model IEnumerable<Questionary>
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
-@foreach (var u in Model)
+@foreach (Questionary u in Model)
 {
-<a asp-action="UserQuestionary" asp-controller="MyQuestionary" asp-route-id="@u.User.Id">
+<a asp-action="UserQuestionary" asp-controller="MyQuestionary" asp-route-id="@u.Id">
     @if (u.Avatar is not null)
     {
         <div class="user_block">

@@ -18,7 +18,7 @@
             @foreach (Favorite u in Model)
 {
         <div class="user_block">
-<a asp-action="UserQuestionary" asp-controller="MyQuestionary" asp-route-id="@u.User.Id">
+<a asp-action="UserQuestionary" asp-controller="MyQuestionary" asp-route-id="@u.Questionary.Id">
             <div class="photo_block">
                 @if (u.Questionary.Avatar is null && u.Questionary.Gen == "Male")
                 {
