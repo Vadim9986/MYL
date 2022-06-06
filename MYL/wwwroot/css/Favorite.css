@@ -142,7 +142,6 @@ h1 {
 .user_block {
     background: #f3218a;
     width: 240px;
-    height: 300px;
     margin: 10px;
     border-radius: 5px;
     padding: 10px;
@@ -161,13 +160,22 @@ h1 {
 
 }
 
-
+.photo_block {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
 
 .photo_block img {
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
-    max-width: 100%;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%;
+    object-fit: cover;
 }
 
 .user_info {
