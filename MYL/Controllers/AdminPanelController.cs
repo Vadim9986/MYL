@@ -30,6 +30,9 @@ namespace MYL.Controllers
             {
                 return Redirect("../Home/Index");
             }
+
+            var user = HttpContext.Session.GetString("Name");
+            ViewBag.Account = user;
             ViewBag.User = _UserService.Get(userName);
             ViewBag.CountUser = _db.Users.Count();
             return View();
@@ -60,10 +63,9 @@ namespace MYL.Controllers
             }
             return View(model);
         }
-        public IActionResult DeleteFromWebSite(string username)
+        public void DeleteFromWebSite(int id)
         {
-            _UserService.DeleteUser(username);
-            return RedirectToAction("AdminPanel");
+            _UserService.Delete(id);
         }
     }
 }

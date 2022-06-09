@@ -29,7 +29,6 @@ function searchLove() {
             search: search
         },
         success: function (response) {
-            console.log(response);
             $('.row').html(response);
            
         }

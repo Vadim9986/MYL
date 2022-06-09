@@ -82,10 +82,13 @@ namespace MYL.Services
             return photos;
         }
 
-        public void DeleteUser(string username)
+        public void Delete(int id)
         {
-            var deleteuser = Get(username);
-            _db.Users.Remove(deleteuser);
+            var quest = _db.People.Include(x => x.User).Include(x => x.Photos).Include(x => x.Favorites).FirstOrDefault(x => x.Id == id);
+            _db.Favorites.RemoveRange(quest.Favorites);
+            _db.Photos.RemoveRange(quest.Photos);
+            _db.People.Remove(quest);
+            _db.Users.Remove(quest.User);
             _db.SaveChanges();
         }
     }

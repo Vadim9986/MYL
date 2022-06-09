@@ -29,9 +29,21 @@ function searchLove() {
             search: search
         },
         success: function (response) {
-            console.log(response);
             $('.row').html(response);
 
+        }
+    });
+}
+
+function Delete(id) {
+    $.ajax({
+        url: "../AdminPanel/DeleteFromWebSite",
+        type: 'POST',
+        data: {
+            id: id
+        },
+        success: function (response) {
+            searchLove();
         }
     });
 }
