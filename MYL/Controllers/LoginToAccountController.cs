@@ -29,6 +29,11 @@ namespace MYL.Controllers
             if (userFromDb is not null && userFromDb.Password == user.Password)
             {
                 ControllerContext.HttpContext.Session.SetString("Name", user.Username);
+                if(userFromDb.IsAdmin)
+                {
+                    return Redirect("../AdminPanel/AdminPanel");
+                }
+
                 return Redirect("../MyQuestionary/MyQuestionary");
             }
             return View();

@@ -37,7 +37,7 @@ namespace MYL.Controllers
         [HttpPost]
         public ViewResult GetQuestionary(SearchViewModel search)
         {
-            List<Questionary> model = _db.People.Include(x => x.User).Where(x => x.Age >= search.AgeStart && x.Age <= search.AgeEnd).Where(x => x.User.Username != HttpContext.Session.GetString("Name")).ToList();
+            List<Questionary> model = _db.People.Include(x => x.User).Where(x => x.Age >= search.AgeStart && x.Age <= search.AgeEnd).Where(x => !x.User.IsAdmin).ToList();
             if (search.Gender is not null)
             {
                 model = model.Where(x => x.Gen.Contains(search.Gender)).ToList();
