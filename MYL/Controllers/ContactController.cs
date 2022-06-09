@@ -31,7 +31,7 @@ namespace MYL.Controllers
         public IActionResult SendEmail( string email)
         {
             service.SendEmail(email);
-            return RedirectToAction("Index");
+            return RedirectToAction("Contact");
         }
         
 

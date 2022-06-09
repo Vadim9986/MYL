@@ -17,5 +17,10 @@ namespace MYL.Controllers
             ViewBag.Account = userName;
             return View(_favoriteService.Get(userName));
         }
+        public IActionResult DeleteFromFavorites(int favoriteId)
+        {
+            _favoriteService.Delete(favoriteId);
+            return RedirectToAction("Favorites");
+        }
     }
 }

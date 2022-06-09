@@ -41,11 +41,11 @@
                 <br />
                 @u.Questionary.Age
             </div>
-             <div class="button_delete">
-                    <button type="submit">
+             <div class="button_delete_block">
+                    <a class="button_delete"asp-controller="Favorites" asp-action="DeleteFromFavorites" asp-route-favoriteId="@u.Id">
                         Delete
-                    </button>
-                </div>
+                    </a>
+             </div>
         </div>
     }
             </div>

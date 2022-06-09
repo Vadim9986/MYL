@@ -13,6 +13,7 @@ namespace MYL.Interfaces
         public void EditUser(Questionary newUser, string userName, IFormFile uploadedFile, IFormFileCollection uploadedPhotos);
         public List<Photo> EditUserPhoto(Questionary newUser, IFormFileCollection uploadedPhotos);
         public User Get(string username);
+        public void DeleteUser(string username);
     }
 
 }

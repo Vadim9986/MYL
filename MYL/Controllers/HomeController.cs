@@ -20,5 +20,7 @@ namespace MYL.Controllers
             ControllerContext.HttpContext.Session.Remove("Name");
             return Redirect("../Home/Index");
         }
+        
+      
     }
 }

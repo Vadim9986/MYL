@@ -81,5 +81,12 @@ namespace MYL.Services
             }
             return photos;
         }
+
+        public void DeleteUser(string username)
+        {
+            var deleteuser = Get(username);
+            _db.Users.Remove(deleteuser);
+            _db.SaveChanges();
+        }
     }
 }

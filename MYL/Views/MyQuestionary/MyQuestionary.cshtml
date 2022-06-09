@@ -119,6 +119,7 @@ else
     </div>
     @if (ViewBag.Account == Model.User.Username)
     {
+        <div class="button_flex_block">
         <div class="button_block">
             <a asp-action="Edit" asp-controller="Edit" class="button" id="fav">
                 <span class="button_line button_line--top"></span>
@@ -128,6 +129,17 @@ else
                 Edit
                 <i class="fa-solid fa-pen-to-square"></i>
             </a>
+        </div>
+         <div class="button_block">
+            <a asp-action="ChangePassword" asp-controller="ChangePassword" class="button" id="fav">
+                <span class="button_line button_line--top"></span>
+                <span class="button_line button_line--right"></span>
+                <span class="button_line button_line--bottom"></span>
+                <span class="button_line button_line--left"></span>
+                Change Password
+                <i class="fa-solid fa-user-pen"></i>
+            </a>
+        </div>
         </div>
     }
     else

@@ -11,6 +11,7 @@ namespace MYL.Interfaces
     {
         public void Add(User user, int questionaryId);
         public void Delete(Favorite favorite);
+        public void Delete(int favoriteId);
         public Favorite Get(int favoriteId);
         public List<Favorite> Get(string userName);
     }

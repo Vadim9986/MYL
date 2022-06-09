@@ -21,7 +21,7 @@ namespace MYL.Services
                 message.IsBodyHtml = true;
                 using (SmtpClient client = new SmtpClient("smtp.gmail.com"))
                 {
-                    client.Credentials = new NetworkCredential("test76562@gmail.com", "QWERTY22");
+                    client.Credentials = new NetworkCredential("test76562@gmail.com", "ooinjmkywbfwbbvc");
                     client.Port = 587;
                     client.EnableSsl = true;
                     client.Send(message);
